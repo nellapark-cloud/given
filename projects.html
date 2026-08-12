@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>프로젝트 — GIVEN MINISTRY</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+.proj-card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
+.proj-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(167,139,250,0.1);}
+.proj-thumb{height:160px;display:flex;align-items:flex-end;padding:16px;}
+.proj-body{padding:24px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="./index.html" class="nav-brand">GIVEN <span>MINISTRY</span></a>
+  <div class="nav-links">
+    <a href="./about.html">사역소개</a>
+    <a href="./team.html">팀소개</a>
+    <a href="./projects.html" class="active">프로젝트</a>
+    <a href="./worship.html">예배</a>
+    <a href="./gallery.html" class="hide-sm">갤러리</a>
+    <a href="./news.html" class="hide-sm">공지</a>
+    <a href="./support.html" class="hide-sm">후원</a>
+    <a href="./apply.html" class="nav-cta">참여신청</a>
+  </div>
+
+  <button class="nav-hamburger" id="navToggle" aria-label="메뉴"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="./about.html">사역소개</a>
+  <a href="./team.html">팀소개</a>
+  <a href="./projects.html" class="d-active">프로젝트</a>
+  <a href="./worship.html">예배</a>
+  <a href="./gallery.html">갤러리</a>
+  <a href="./news.html">공지사항</a>
+  <a href="./support.html">후원</a>
+  <a href="./apply.html" class="d-cta">참여신청</a>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<div class="page-header">
+  <div class="container">
+    <span class="label">프로젝트 기록</span>
+    <h1 class="page-title">함께 만들어온 <em>이야기</em></h1>
+  </div>
+</div>
+
+<!-- FEATURED -->
+<section class="bg2">
+  <div class="container" data-fade="">
+    <span class="label">대표 프로젝트</span>
+    <div class="card" style="display:flex;flex-wrap:wrap;border-radius:16px;padding:0;overflow:hidden;">
+      <div style="flex:0 0 280px;min-height:260px;background:linear-gradient(135deg,rgba(124,92,232,0.35),rgba(167,139,250,0.12));display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;"><div style="font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(167,139,250,0.4);">♪</div><div style="font-size:10px;letter-spacing:0.2em;color:var(--violet);font-family:'Noto Sans KR',sans-serif;margin-top:8px;">CONCERT</div></div>
+      </div>
+      <div style="flex:1;padding:48px;min-width:240px;">
+        <div style="font-size:12px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:12px;">2024. 10 · 공연</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;margin-bottom:16px;line-height:1.2;">제1회 GIVEN 콘서트</h2>
+        <p style="font-size:14px;font-weight:300;line-height:2;color:rgba(240,238,255,0.7);margin-bottom:28px;">GIVEN MINISTRY의 첫 번째 공식 공연. 음악 분야 멤버들이 수개월간 준비한 찬양과 연주로 하나님을 영화롭게 한 날이었습니다.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="tag" style="background:rgba(167,139,250,0.12);color:var(--violet);">음악</span>
+          <span class="tag" style="background:rgba(52,211,153,0.1);color:var(--mint);">공간</span>
+          <span class="tag" style="background:rgba(251,113,133,0.1);color:var(--coral);">미디어</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRID -->
+<section>
+  <div class="container">
+    <span class="label" data-fade="">전체 기록</span>
+    <div class="grid-3" data-fade="">
+      <div class="proj-card">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(251,113,133,0.25),rgba(251,113,133,0.06));"><span class="tag" style="background:rgba(251,113,133,0.12);color:var(--coral);">전시</span></div>
+        <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2024. 08</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">빛 — 그룹 전시회</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">"빛"을 주제로 하나님의 이야기를 시각화한 그룹 전시.</p></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(52,211,153,0.2),rgba(52,211,153,0.05));"><span class="tag" style="background:rgba(52,211,153,0.1);color:var(--mint);">집회</span></div>
+        <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2024. 07</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">여름 문화집회</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">공간을 제공해주신 멤버의 헌신으로 이루어진 여름 집회.</p></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(251,191,36,0.2),rgba(251,191,36,0.05));"><span class="tag" style="background:rgba(251,191,36,0.1);color:var(--amber);">세미나</span></div>
+        <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2023. 11</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">문화사역 세미나</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">문화사역의 의미와 방향을 함께 나눈 세미나.</p></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(147,197,253,0.2),rgba(147,197,253,0.05));"><span class="tag" style="background:rgba(147,197,253,0.1);color:var(--blue);">예배</span></div>
+        <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2023. 12</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">크리스마스 특별 예배</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">각 분야 멤버들이 함께 준비한 첫 공식 예배.</p></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(124,92,232,0.25),rgba(124,92,232,0.06));"><span class="tag" style="background:rgba(167,139,250,0.12);color:var(--violet);">공연</span></div>
+        <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2023. 09</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">창립 기념 소규모 공연</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">GIVEN MINISTRY 창립을 기념해 드린 첫 소규모 공연.</p></div>
+      </div>
+      <div class="proj-card" style="border:1.5px dashed rgba(167,139,250,0.2);display:flex;align-items:center;justify-content:center;min-height:240px;">
+        <div style="text-align:center;padding:32px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:rgba(167,139,250,0.3);margin-bottom:12px;">+</div>
+          <div style="font-size:13px;color:var(--muted);font-weight:300;font-family:'Noto Sans KR',sans-serif;">다음 프로젝트를<br>함께 만들어요</div>
+          <a href="./apply.html" style="display:inline-block;margin-top:16px;font-size:11px;letter-spacing:0.15em;color:var(--violet);text-decoration:none;border-bottom:1px solid rgba(167,139,250,0.3);padding-bottom:2px;font-family:'Noto Sans KR',sans-serif;">참여신청 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">GIVEN <span>MINISTRY</span></div><div class="footer-sub">기븐미니스트리 · 문화사역 공동체</div></div>
+    <div class="footer-links"><a href="./about.html">사역소개</a><a href="./team.html">팀소개</a><a href="./news.html">공지사항</a><a href="./support.html">후원</a><a href="./apply.html">참여신청</a></div>
+    <div class="footer-copy">© 2025 GIVEN MINISTRY</div>
+  </div>
+</footer>
+<script>document.addEventListener('DOMContentLoaded',()=>{const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:0.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('[data-fade]').forEach(el=>obs.observe(el));});</script>
+
+
+<script>
+(function(){
+  var btn=document.getElementById('navToggle');
+  var drawer=document.getElementById('mobileDrawer');
+  var overlay=document.getElementById('mobileOverlay');
+  if(!btn||!drawer)return;
+  function open(){drawer.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){drawer.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',function(e){e.stopPropagation();drawer.classList.contains('open')?close():open();});
+  overlay.addEventListener('click',close);
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+})();
+</script>
+</body>
+</html>
