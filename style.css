@@ -4,7 +4,7 @@
   --bg:#1A1828;--bg2:#201D32;--card:#2E2A44;
   --text:#F0EEFF;--muted:#9A94B8;
   --violet:#A78BFA;--violet2:#7C5CE8;
-  --amber:#FBBF24;--coral:#FB7185;--mint:#34D399;--blue:#93C5FD;
+  --amber:#9679B4;--coral:#9077B8;--mint:#8382B8;--blue:#7788BC;
   --bdr:rgba(167,139,250,0.15);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -126,7 +126,7 @@ footer{background:rgba(32,29,50,0.55);backdrop-filter:blur(10px);-webkit-backdro
 }
 @keyframes textGlow{
   0%,100%{filter:drop-shadow(0 0 8px rgba(167,139,250,0.5)) drop-shadow(0 0 24px rgba(167,139,250,0.25));}
-  50%    {filter:drop-shadow(0 0 20px rgba(167,139,250,0.85)) drop-shadow(0 0 50px rgba(167,139,250,0.4)) drop-shadow(0 0 80px rgba(251,191,36,0.2));}
+  50%    {filter:drop-shadow(0 0 20px rgba(167,139,250,0.85)) drop-shadow(0 0 50px rgba(167,139,250,0.4)) drop-shadow(0 0 80px rgba(150,121,180,0.2));}
 }
 
 /* RESPONSIVE */
