@@ -125,6 +125,16 @@ textarea.form-field{resize:vertical;}
 /* DIVIDER */
 .accent-line{width:48px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--violet),var(--coral));margin-bottom:32px;}
 
+/* TIMELINE */
+.timeline{position:relative;padding-left:36px;}
+.timeline::before{content:'';position:absolute;left:5px;top:4px;bottom:4px;width:2px;background:linear-gradient(180deg,var(--violet),rgba(167,139,250,0.08));}
+.timeline-item{position:relative;padding-bottom:40px;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-item::before{content:'';position:absolute;left:-36px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 4px rgba(167,139,250,0.18);}
+.timeline-year{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--violet);margin-bottom:12px;}
+.timeline-content li{font-size:14px;font-weight:300;line-height:2;color:rgba(240,238,255,0.78);}
+@media(max-width:640px){.timeline{padding-left:26px;}.timeline-item::before{left:-26px;width:10px;height:10px;}}
+
 /* FOOTER */
 footer{background:rgba(32,29,50,0.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--bdr);padding:40px 48px;}
 .footer-inner{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
@@ -551,6 +561,44 @@ footer{background:rgba(32,29,50,0.55);backdrop-filter:blur(10px);-webkit-backdro
       <div style="display:flex;align-items:center;gap:28px;padding:28px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);">
         <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#4F5D93,#7788BC);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#fff;">N</div>
         <div><div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:4px;">Nurture <span style="font-size:13px;font-weight:300;color:var(--blue);font-family:'Noto Sans KR',sans-serif;margin-left:8px;">공동체를 세우며</span></div><p style="font-size:14px;font-weight:300;color:var(--muted);line-height:1.8;">프로젝트를 넘어 서로를 세워가는 공동체. 협의하고 나누며 함께 성장합니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section class="bg2">
+  <div class="container">
+    <span class="label" data-fade="">연혁</span>
+    <h2 class="section-title" data-fade="">함께 걸어온 <em>시간들</em></h2>
+    <div class="timeline" data-fade="">
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-content">
+          <ul style="list-style:none;">
+            <li>· 기븐미니스트리 명명, 사역 비전과 방향 설정</li>
+            <li>· 대전 소재 시스템사역자 최희돈 · 황인용 대표와 기븐미니스트리 관련 회의</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-content">
+          <ul style="list-style:none;">
+            <li>· 은혜교회 성도를 중심으로 사역 설명 및 후원 요청</li>
+            <li>· 천안 아포이 대표 이승준 · 이미나 부부의 공간 제공으로 쉘위워십(서울에서 시작된 찬양사역자들의 예배 모임) 천안예배 진행</li>
+            <li>· 은혜교회에서 찬양사역자들을 세우고 지역교회와 함께하며 찬양문화사역 활성화를 위한 사역자 초청 및 연합집회 시작 (팝페라 가수 김선희 교수 초청 연주회)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2026</div>
+        <div class="timeline-content">
+          <ul style="list-style:none;">
+            <li>· 클라리네티스트 정선규 선교사 초청 연주회</li>
+            <li>· 색소포니스트 심삼정 교수 초청 연주회</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
