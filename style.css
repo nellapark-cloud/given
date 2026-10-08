@@ -2,10 +2,10 @@
 
 :root{
   --bg:#1A1828;--bg2:#201D32;--card:#2E2A44;
-  --text:#F0EEFF;--muted:#9A94B8;
+  --text:#F0EEFF;--muted:#A499DB;
   --violet:#A78BFA;--violet2:#7C5CE8;
-  --amber:#9679B4;--coral:#9077B8;--mint:#8382B8;--blue:#7788BC;
-  --bdr:rgba(167,139,250,0.15);
+  --amber:#A06CD6;--coral:#956AD9;--mint:#7876D8;--blue:#6B87DC;
+  --bdr:rgba(167,139,250,0.22);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;overflow-x:hidden;width:100%;touch-action:pan-y;overscroll-behavior-x:none;}
@@ -15,11 +15,11 @@ body{
   touch-action:pan-y;
   overscroll-behavior-x:none;
   background:
-    radial-gradient(1200px 800px at 10% -12%, rgba(167,139,250,0.24), transparent 55%),
-    radial-gradient(1000px 900px at 108% 6%, rgba(251,113,133,0.16), transparent 55%),
-    radial-gradient(1100px 1000px at 50% 58%, rgba(147,197,253,0.12), transparent 60%),
-    radial-gradient(1000px 800px at 4% 106%, rgba(52,211,153,0.12), transparent 55%),
-    radial-gradient(1200px 1000px at 96% 108%, rgba(124,92,232,0.24), transparent 60%),
+    radial-gradient(1200px 800px at 10% -12%, rgba(167,139,250,0.30), transparent 55%),
+    radial-gradient(1000px 900px at 108% 6%, rgba(251,113,133,0.20), transparent 55%),
+    radial-gradient(1100px 1000px at 50% 58%, rgba(147,197,253,0.16), transparent 60%),
+    radial-gradient(1000px 800px at 4% 106%, rgba(52,211,153,0.16), transparent 55%),
+    radial-gradient(1200px 1000px at 96% 108%, rgba(124,92,232,0.30), transparent 60%),
     linear-gradient(165deg,#13111E 0%,#1A1828 42%,#201D32 100%);
   background-attachment:fixed;
   background-repeat:no-repeat;
@@ -50,7 +50,7 @@ nav.open .nav-hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45d
 .container{max-width:1060px;margin:0 auto;}
 .container-sm{max-width:760px;margin:0 auto;}
 section{padding:100px 48px;}
-.bg2{background:rgba(32,29,50,0.5);}
+.bg2{background:rgba(32,29,50,0.64);}
 .two-col{display:flex;gap:72px;align-items:flex-start;}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -62,7 +62,7 @@ section{padding:100px 48px;}
 .section-title em{color:var(--violet);font-style:italic;}
 .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,80px);font-weight:400;line-height:1.1;}
 .page-title em{color:var(--violet);font-style:italic;}
-.body-text{font-size:15px;font-weight:300;line-height:2.2;color:rgba(240,238,255,0.72);}
+.body-text{font-size:15px;font-weight:300;line-height:2.2;color:rgba(240,238,255,0.82);}
 
 /* PAGE HEADER */
 .page-header{padding:150px 48px 80px;background:linear-gradient(160deg,rgba(26,24,40,0.3) 0%,rgba(32,29,50,0.5) 100%);position:relative;overflow:hidden;border-bottom:1px solid var(--bdr);}
@@ -78,7 +78,7 @@ section{padding:100px 48px;}
 .btn-block{width:100%;text-align:center;}
 
 /* CARDS */
-.card{background:rgba(46,42,68,0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--bdr);border-radius:12px;padding:28px;transition:transform 0.3s,box-shadow 0.3s;}
+.card{background:rgba(46,42,68,0.64);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--bdr);border-radius:12px;padding:28px;transition:transform 0.3s,box-shadow 0.3s;}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(167,139,250,0.1);}
 
 /* FORM */
@@ -114,7 +114,7 @@ textarea.form-field{resize:vertical;}
 @media(max-width:640px){.timeline{padding-left:26px;}.timeline-item::before{left:-26px;width:10px;height:10px;}}
 
 /* FOOTER */
-footer{background:rgba(32,29,50,0.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--bdr);padding:40px 48px;}
+footer{background:rgba(32,29,50,0.68);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--bdr);padding:40px 48px;}
 .footer-inner{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .footer-brand{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;letter-spacing:0.12em;margin-bottom:6px;}
 .footer-brand span{color:var(--violet);}
