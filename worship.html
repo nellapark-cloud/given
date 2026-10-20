@@ -71,13 +71,35 @@
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top:56px;" data-fade="">
-    <figure style="margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--bdr);box-shadow:0 18px 50px rgba(0,0,0,0.35);">
-      <img src="./images/concert-01-shellwe-apoi.jpg" alt="쉘위워십과 함께 드린 예배" loading="lazy" style="width:100%;aspect-ratio:4/3;max-height:560px;object-fit:cover;display:block;">
-    </figure>
-    <p style="margin-top:14px;text-align:center;font-size:12px;letter-spacing:0.08em;color:var(--muted);font-family:'Noto Sans KR',sans-serif;font-weight:300;">쉘위워십 천안예배 · 아포이</p>
+</section>
+
+<!-- MOMENTS -->
+<section class="bg2">
+  <div class="container">
+    <span class="label" data-fade="">예배의 순간들 · MOMENTS</span>
+    <h2 class="section-title" data-fade="">쉘위워십과 함께한 <em>찬양의 자리</em></h2>
+    <div class="mosaic" data-fade="">
+      <button type="button" class="mosaic-item big" data-src="./images/sw-01.jpg"><img src="./images/sw-01.jpg" alt="쉘위워십 예배 현장" loading="lazy" style="object-position:center;"></button>
+      <button type="button" class="mosaic-item tall" data-src="./images/sw-02.jpg"><img src="./images/sw-02.jpg" alt="예배자 나눔" loading="lazy" style="object-position:center 30%;"></button>
+      <button type="button" class="mosaic-item " data-src="./images/sw-03.jpg"><img src="./images/sw-03.jpg" alt="건반 연주" loading="lazy" style="object-position:center;"></button>
+      <button type="button" class="mosaic-item " data-src="./images/sw-04.jpg"><img src="./images/sw-04.jpg" alt="찬양" loading="lazy" style="object-position:center 30%;"></button>
+      <button type="button" class="mosaic-item wide" data-src="./images/sw-05.jpg"><img src="./images/sw-05.jpg" alt="10월 쉘위워십 단체사진" loading="lazy" style="object-position:center 45%;"></button>
+      <button type="button" class="mosaic-item wide" data-src="./images/sw-06.jpg"><img src="./images/sw-06.jpg" alt="예배의 자리" loading="lazy" style="object-position:center;"></button>
+      <button type="button" class="mosaic-item " data-src="./images/sw-07.jpg"><img src="./images/sw-07.jpg" alt="말씀과 찬양" loading="lazy" style="object-position:center 25%;"></button>
+      <button type="button" class="mosaic-item " data-src="./images/sw-08.jpg"><img src="./images/sw-08.jpg" alt="함께한 사역자들" loading="lazy" style="object-position:center 40%;"></button>
+      <button type="button" class="mosaic-item wide" data-src="./images/sw-09.jpg"><img src="./images/sw-09.jpg" alt="6월 쉘위워십 단체사진" loading="lazy" style="object-position:center 40%;"></button>
+      <button type="button" class="mosaic-item wide" data-src="./images/sw-10.jpg"><img src="./images/sw-10.jpg" alt="쉘위워십 단체사진" loading="lazy" style="object-position:center 40%;"></button>
+      <button type="button" class="mosaic-item wide" data-src="./images/sw-11.jpg"><img src="./images/sw-11.jpg" alt="기타 찬양" loading="lazy" style="object-position:center 22%;"></button>
+    </div>
   </div>
 </section>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightboxImg" alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lightbox'),im=document.getElementById('lightboxImg');
+document.querySelectorAll('.mosaic-item').forEach(function(b){b.addEventListener('click',function(){im.src=b.dataset.src;im.alt=b.querySelector('img').alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
 
 <!-- SCHEDULE -->
 <section class="bg2">
