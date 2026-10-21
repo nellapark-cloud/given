@@ -260,3 +260,5 @@ footer{background:rgba(26,18,32,0.62);backdrop-filter:blur(10px);-webkit-backdro
 .sww-poster img{width:100%;display:block;border-radius:6px;}
 @media(max-width:700px){.sww-poster{transform:none;padding:10px;}}
 @media(max-width:700px){.card .hide-sm[style*='width:1px']{display:none !important;}}
+.notice-poster{margin:0;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);}
+.notice-poster img{width:100%;display:block;}
