@@ -255,3 +255,7 @@ footer{background:rgba(26,18,32,0.62);backdrop-filter:blur(10px);-webkit-backdro
 .sww-card .sww-map{flex:1;min-height:260px;}
 .sww-card .sww-map iframe{min-height:260px;}
 @media(max-width:700px){.sww-card{padding:22px;}}
+.sww-poster{margin:0;padding:14px;background:#fff;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);transform:rotate(1.2deg);transition:transform .5s ease;}
+.sww-poster:hover{transform:rotate(0deg) scale(1.01);}
+.sww-poster img{width:100%;display:block;border-radius:6px;}
+@media(max-width:700px){.sww-poster{transform:none;padding:10px;}}
