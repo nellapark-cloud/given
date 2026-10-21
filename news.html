@@ -86,6 +86,89 @@
   </div>
 </section>
 
+<!-- PAST NOTICES -->
+<section>
+  <div class="container-sm">
+    <span class="label" data-fade="">지난 공지 · ARCHIVE</span>
+    <div class="board" data-fade="">
+      <div class="board-head"><span class="b-no">번호</span><span class="b-title">제목</span><span class="b-date">날짜</span></div>
+      <ul class="board-list" id="boardList"></ul>
+      <div class="board-pages" id="boardPages" role="navigation" aria-label="지난 공지 페이지"></div>
+    </div>
+  </div>
+</section>
+<script>
+/* 지난 공지 — 새 글은 맨 위에 추가하면 됩니다 */
+var PAST_NOTICES = [
+ {
+  "date": "2025.07.01",
+  "tag": "공지",
+  "title": "2025년 7월 월례 예배 안내",
+  "body": "7월 월례 예배가 2025년 7월 20일(일) 오후 4시에 열립니다. 장소는 추후 공지될 예정이며, 멤버 여러분은 공지사항을 확인해 주세요. 자율 멤버와 관심 있는 분들도 모두 환영합니다."
+ },
+ {
+  "date": "2025.06.20",
+  "tag": "프로젝트",
+  "title": "제2회 GIVEN 콘서트 준비 중",
+  "body": "올 하반기 제2회 GIVEN 콘서트를 준비하고 있습니다. 음악 분야 멤버 분들의 참여를 기다립니다."
+ },
+ {
+  "date": "2025.06.01",
+  "tag": "모집",
+  "title": "신규 멤버 모집 — 미술 · 디자인 분야",
+  "body": "미술, 그래픽 디자인, 영상 분야에서 함께할 멤버를 찾습니다. 참여 신청 페이지를 통해 문의해 주세요."
+ },
+ {
+  "date": "2025.05.15",
+  "tag": "업데이트",
+  "title": "갤러리 및 홈페이지 오픈",
+  "body": "GIVEN MINISTRY 공식 홈페이지와 갤러리가 오픈되었습니다. 앞으로 더 많은 소식을 이곳에서 전하겠습니다."
+ },
+ {
+  "date": "2025.04.10",
+  "tag": "예배",
+  "title": "4월 월례 예배 후기",
+  "body": "지난 4월 월례 예배가 은혜 가운데 마무리되었습니다. 함께해 주신 모든 분들께 감사드립니다."
+ },
+ {
+  "date": "2025.03.01",
+  "tag": "안내",
+  "title": "2025년 사역 방향 발표",
+  "body": "2025년 GIVEN MINISTRY의 주요 사역 방향과 계획이 발표되었습니다. 하반기 콘서트와 전시회가 주요 프로젝트입니다."
+ }
+];
+(function(){
+  var PER=10, page=1, list=document.getElementById('boardList'), pager=document.getElementById('boardPages');
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function render(){
+    var total=PAST_NOTICES.length, pages=Math.max(1,Math.ceil(total/PER));
+    if(page>pages)page=pages;
+    var start=(page-1)*PER, items=PAST_NOTICES.slice(start,start+PER);
+    list.innerHTML=items.map(function(n,i){
+      var no=total-(start+i);
+      return '<li class="board-item"><button type="button" class="board-row" aria-expanded="false">'+
+        '<span class="b-no">'+no+'</span><span class="b-title"><span class="b-tag">'+esc(n.tag)+'</span>'+esc(n.title)+'</span>'+
+        '<span class="b-date">'+esc(n.date)+'</span><span class="b-arrow" aria-hidden="true"></span></button>'+
+        '<div class="board-body"><div class="board-body-inner"><p>'+esc(n.body)+'</p></div></div></li>';
+    }).join('');
+    list.querySelectorAll('.board-row').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var item=btn.parentNode, open=item.classList.contains('open');
+        list.querySelectorAll('.board-item.open').forEach(function(o){o.classList.remove('open');o.firstChild.setAttribute('aria-expanded','false');});
+        if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+      });
+    });
+    if(pages<=1){pager.innerHTML='';return;}
+    var h='<button type="button" data-p="'+(page-1)+'" '+(page===1?'disabled':'')+'>‹</button>';
+    for(var p=1;p<=pages;p++)h+='<button type="button" data-p="'+p+'" class="'+(p===page?'on':'')+'">'+p+'</button>';
+    h+='<button type="button" data-p="'+(page+1)+'" '+(page===pages?'disabled':'')+'>›</button>';
+    pager.innerHTML=h;
+    pager.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){page=+b.dataset.p;render();list.scrollIntoView({behavior:'smooth',block:'start'});});});
+  }
+  render();
+})();
+</script>
+
 <footer>
   <div class="footer-inner">
     <div><div class="footer-brand">GIVEN <span>MINISTRY</span></div><div class="footer-sub">기븐미니스트리 · 문화사역 공동체</div></div>
