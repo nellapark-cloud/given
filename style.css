@@ -259,3 +259,4 @@ footer{background:rgba(26,18,32,0.62);backdrop-filter:blur(10px);-webkit-backdro
 .sww-poster:hover{transform:rotate(0deg) scale(1.01);}
 .sww-poster img{width:100%;display:block;border-radius:6px;}
 @media(max-width:700px){.sww-poster{transform:none;padding:10px;}}
+@media(max-width:700px){.card .hide-sm[style*='width:1px']{display:none !important;}}
