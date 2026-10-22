@@ -290,3 +290,4 @@ footer{background:rgba(26,18,32,0.62);backdrop-filter:blur(10px);-webkit-backdro
 .board-pages button:disabled{opacity:.3;cursor:default;}
 @media(max-width:700px){.board-head,.board-row{grid-template-columns:34px 1fr 72px 14px;gap:8px;}.b-title{font-size:14px;}.board-body p{padding:2px 12px 20px 50px;}.b-tag{display:none;}}
 .plaque-name{font-size:clamp(19px,2vw,24px);letter-spacing:.08em;white-space:nowrap;}.plaque{padding:36px 16px 32px;}
+.church-wall{display:flex;flex-wrap:wrap;justify-content:center;max-width:780px;}.church-wall .plaque{flex:0 1 236px;}@media(max-width:560px){.church-wall .plaque{flex:1 1 100%;}}
