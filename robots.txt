@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /given-ministry-site.html
+
+Sitemap: https://givenministry.com/sitemap.xml
