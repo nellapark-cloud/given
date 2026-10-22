@@ -217,7 +217,7 @@ footer{background:rgba(26,18,32,0.62);backdrop-filter:blur(10px);-webkit-backdro
 
 /* PARTNER CHURCH WALL */
 .church-wall-sec{border-top:1px solid rgba(232,196,107,0.14);}
-.church-wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:780px;margin:0 auto;}
+.church-wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1000px;margin:0 auto;}
 .plaque{position:relative;padding:40px 24px 36px;border-radius:6px;
   background:linear-gradient(160deg,#2B2131 0%,#1D1723 55%,#241B2A 100%);
   border:1px solid rgba(232,196,107,0.38);
@@ -289,3 +289,4 @@ footer{background:rgba(26,18,32,0.62);backdrop-filter:blur(10px);-webkit-backdro
 .board-pages button.on{background:linear-gradient(135deg,var(--violet2),var(--violet));color:#fff;border-color:transparent;}
 .board-pages button:disabled{opacity:.3;cursor:default;}
 @media(max-width:700px){.board-head,.board-row{grid-template-columns:34px 1fr 72px 14px;gap:8px;}.b-title{font-size:14px;}.board-body p{padding:2px 12px 20px 50px;}.b-tag{display:none;}}
+.plaque-name{font-size:clamp(19px,2vw,24px);letter-spacing:.08em;white-space:nowrap;}.plaque{padding:36px 16px 32px;}
