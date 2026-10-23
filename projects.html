@@ -88,6 +88,38 @@
   </div>
 </section>
 
+<!-- JANG CONCERT -->
+<section id="jang-concert">
+  <div class="container">
+    <div class="two-col" style="align-items:center;">
+      <div style="flex:1 1 520px;min-width:280px;" data-fade="">
+        <div class="proj-mosaic">
+          <button type="button" class="pm-item pm-main" data-src="./images/jang-01.jpg"><img src="./images/jang-01.jpg" alt="장성규 선교사 클라리넷 연주와 간증" loading="lazy"></button>
+          <button type="button" class="pm-item" data-src="./images/jang-02.jpg"><img src="./images/jang-02.jpg" alt="클라리넷과 기타 협연" loading="lazy" style="object-position:center 35%;"></button>
+          <button type="button" class="pm-item" data-src="./images/jang-03.jpg"><img src="./images/jang-03.jpg" alt="연주회 후 함께한 단체사진" loading="lazy" style="object-position:center 55%;"></button>
+        </div>
+      </div>
+      <div style="flex:1 1 380px;" data-fade="">
+        <div style="font-size:12px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:12px;">2026. 05. 20 · 공연</div>
+        <h2 class="section-title" style="margin-bottom:16px;">장성규 선교사 <em>클라리넷 연주회</em></h2>
+        <p class="body-text" style="margin-bottom:16px;">5월 20일 수요일 저녁 7시, 캄보디아 장성규 선교사님의 클라리넷 연주회가 있었습니다.</p>
+        <p class="body-text" style="margin-bottom:24px;">한국어, 영어, 독일어, 캄보디아어에 전라도 사투리까지 5개 국어를 넘나드는 이야기에 웃고 울고, 능숙한 연주가 더해져 두 시간이 훌쩍 지나간 은혜의 시간이었습니다.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="tag" style="background:rgba(167,139,250,0.12);color:var(--violet);">음악</span>
+          <span class="tag" style="background:rgba(232,196,107,0.12);color:#E8C46B;">선교</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightboxImg" alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lightbox'),im=document.getElementById('lightboxImg');
+document.querySelectorAll('.pm-item').forEach(function(b){b.addEventListener('click',function(){im.src=b.dataset.src;im.alt=b.querySelector('img').alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+
 <!-- GRID -->
 <section>
   <div class="container">
@@ -97,6 +129,10 @@
         <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(20,15,35,0.55),rgba(20,15,35,0.1)),url('./images/concert-02-sim-samjong.jpg?v=2') center 22%/cover;"><span class="tag" style="background:rgba(167,139,250,0.12);color:var(--violet);">공연</span></div>
         <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2026. 08. 30</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">심삼종 교수 초청 연주회</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">섹소포니스트 심삼종 교수님을 초청해 함께한 연주회였습니다.</p></div>
       </div>
+      <a class="proj-card" href="#jang-concert" style="text-decoration:none;color:inherit;display:block;">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(20,15,35,0.55),rgba(20,15,35,0.1)),url('./images/jang-01.jpg') center 25%/cover;"><span class="tag" style="background:rgba(167,139,250,0.12);color:var(--violet);">공연</span></div>
+        <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2026. 05. 20</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">장성규 선교사 클라리넷 연주회</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">캄보디아 장성규 선교사님의 클라리넷 연주와 5개 국어 간증으로 함께한 은혜의 시간.</p></div>
+      </a>
       <div class="proj-card">
         <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(144,119,184,0.25),rgba(144,119,184,0.06));"><span class="tag" style="background:rgba(144,119,184,0.12);color:var(--coral);">전시</span></div>
         <div class="proj-body"><div style="font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:8px;">2024. 08</div><h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">빛 — 그룹 전시회</h3><p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.8;">"빛"을 주제로 하나님의 이야기를 시각화한 그룹 전시.</p></div>
