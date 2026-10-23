@@ -308,3 +308,17 @@ footer{background:rgba(26,18,32,0.62);backdrop-filter:blur(10px);-webkit-backdro
 .collab-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;}
 .collab-list li{font-size:12px;font-weight:300;color:var(--muted);background:rgba(167,139,250,.08);border-radius:6px;padding:3px 9px;}
 @media(max-width:700px){.board-grid .card{flex:1 1 100%;min-width:0;}.collab-card{flex-direction:column;text-align:center;}.collab-list{justify-content:center;}}
+
+/* KOREAN LINE BREAKING — 단어 단위 줄바꿈 */
+html,body{word-break:keep-all;overflow-wrap:break-word;line-break:strict;}
+h1,h2,h3,.page-title,.section-title,.hero-title,.plaque-name,.sww-name,.collab-name{text-wrap:balance;}
+p,li,.body-text{text-wrap:pretty;}
+/* 제목 글꼴(Cormorant)의 옛 숫자 모양(제ɪ회) 대신 반듯한 숫자 */
+body,h1,h2,h3,.page-title,.section-title{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
+/* 긴 URL·영문은 넘치지 않게 */
+a,.b-title{overflow-wrap:anywhere;}
+@media(max-width:700px){
+  .card h2{font-size:clamp(24px,7.2vw,30px)!important;line-height:1.35!important;}
+  .card [style*="padding:48px"]{padding:28px 24px!important;}
+  .section-title{font-size:clamp(26px,7.4vw,34px);}
+}
