@@ -322,3 +322,4 @@ a,.b-title{overflow-wrap:anywhere;}
   .card [style*="padding:48px"]{padding:28px 24px!important;}
   .section-title{font-size:clamp(26px,7.4vw,34px);}
 }
+.collab-card{flex:0 1 500px;}
