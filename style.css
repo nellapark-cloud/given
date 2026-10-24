@@ -363,3 +363,8 @@ a,.b-title{overflow-wrap:anywhere;}
 .region-daejeon{color:#F0B7CF;background:rgba(200,110,150,.14);border:1px solid rgba(200,120,160,.32);}
 .member-chip.rg{padding-right:64px;}
 .member-chip .region-tag{bottom:50%;transform:translateY(50%);right:12px;}
+
+.plaque{position:relative;}
+.pl-sejong{background:linear-gradient(160deg,#28283C 0%,#1B1A2A 55%,#22233A 100%);}
+.pl-daejeon{background:linear-gradient(160deg,#31202E 0%,#1F1622 55%,#2A1B28 100%);}
+.plaque .region-tag{right:12px;bottom:10px;font-size:9px;padding:2px 8px;}
