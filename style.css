@@ -397,3 +397,10 @@ a,.b-title{overflow-wrap:anywhere;}
   -webkit-mask:radial-gradient(80% 85% at 50% 0%,#000 25%,transparent 80%);mask:radial-gradient(80% 85% at 50% 0%,#000 25%,transparent 80%);
   animation:blessGlow 5s ease-in-out infinite;}
 @keyframes blessGlow{0%,100%{opacity:.65;}50%{opacity:1;}}
+/* BLESSING CARD — calm version */
+.bless-card::before,.bless-card::after,.bless-spark{display:none!important;animation:none!important;}
+.bless-card{background:radial-gradient(90% 70% at 50% 0%,rgba(232,196,107,.10),transparent 70%),rgba(48,34,58,.5)!important;
+  border:1px solid rgba(232,196,107,.28)!important;box-shadow:0 14px 40px rgba(0,0,0,.28)!important;}
+.bless-title{background:none;-webkit-text-fill-color:#F0DDB0;color:#F0DDB0;filter:none;font-weight:400;}
+.bless-kicker{color:rgba(232,196,107,.85);}
+.bless-text{color:rgba(240,238,255,.75);}
