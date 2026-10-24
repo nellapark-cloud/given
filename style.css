@@ -353,3 +353,13 @@ a,.b-title{overflow-wrap:anywhere;}
 .dict-head{margin:-12px 0 36px;padding:14px 0;border-top:1px dashed rgba(167,139,250,.25);border-bottom:1px dashed rgba(167,139,250,.25);}
 .dict-word{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#E8C46B;letter-spacing:.04em;margin-right:4px;}
 @media(max-width:700px){.dict-en{flex-basis:100%;}.dict-head .dict-en{flex-basis:auto;}}
+
+/* REGION TONES */
+.rg{position:relative;}
+.rg-sejong{background:linear-gradient(160deg,rgba(76,92,150,.42),rgba(40,34,62,.5))!important;border-color:rgba(130,150,220,.32)!important;}
+.rg-daejeon{background:linear-gradient(160deg,rgba(110,52,86,.40),rgba(44,28,46,.5))!important;border-color:rgba(200,120,160,.28)!important;}
+.region-tag{position:absolute;right:14px;bottom:12px;font-family:'Noto Sans KR',sans-serif;font-size:10px;letter-spacing:.18em;padding:3px 9px;border-radius:100px;line-height:1.4;}
+.region-sejong{color:#AFC2F5;background:rgba(107,135,220,.16);border:1px solid rgba(130,150,220,.35);}
+.region-daejeon{color:#F0B7CF;background:rgba(200,110,150,.14);border:1px solid rgba(200,120,160,.32);}
+.member-chip.rg{padding-right:64px;}
+.member-chip .region-tag{bottom:50%;transform:translateY(50%);right:12px;}
