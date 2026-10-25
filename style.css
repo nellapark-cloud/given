@@ -404,3 +404,4 @@ a,.b-title{overflow-wrap:anywhere;}
 .bless-title{background:none;-webkit-text-fill-color:#F0DDB0;color:#F0DDB0;filter:none;font-weight:400;}
 .bless-kicker{color:rgba(232,196,107,.85);}
 .bless-text{color:rgba(240,238,255,.75);}
+.collab-initial{display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:500;color:#fff;background:linear-gradient(135deg,var(--violet2),var(--violet));background-clip:content-box;}
