@@ -405,3 +405,5 @@ a,.b-title{overflow-wrap:anywhere;}
 .bless-kicker{color:rgba(232,196,107,.85);}
 .bless-text{color:rgba(240,238,255,.75);}
 .collab-initial{display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:500;color:#fff;background:linear-gradient(135deg,var(--violet2),var(--violet));background-clip:content-box;}
+.rg-iksan{background:linear-gradient(160deg,rgba(52,96,92,.40),rgba(30,34,44,.5))!important;border-color:rgba(110,180,165,.30)!important;}
+.region-iksan{color:#A9E0D2;background:rgba(90,170,150,.14);border:1px solid rgba(110,180,165,.35);}
