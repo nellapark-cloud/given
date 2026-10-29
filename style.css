@@ -410,3 +410,7 @@ a,.b-title{overflow-wrap:anywhere;}
 .pl-iksan{background:linear-gradient(160deg,#1F2C2C 0%,#171C22 55%,#1D2729 100%);}
 .board-note{max-width:720px;margin:-8px 0 36px;font-size:14px;color:rgba(240,238,255,.65);}
 .arranger-badge{display:inline-block;vertical-align:3px;margin-left:6px;font-family:'Noto Sans KR',sans-serif;font-size:9px;font-weight:400;letter-spacing:.14em;color:#E8C46B;border:1px solid rgba(232,196,107,.45);border-radius:100px;padding:2px 8px;}
+
+.rg-cheonan{background:linear-gradient(160deg,rgba(110,84,44,.40),rgba(30,34,44,.5))!important;border-color:rgba(210,170,110,.30)!important;}
+.region-cheonan{color:#EBCB98;background:rgba(200,150,80,.14);border:1px solid rgba(210,170,110,.35);}
+.pl-cheonan{background:linear-gradient(160deg,#2C2619 0%,#1C1B20 55%,#29251D 100%);}
