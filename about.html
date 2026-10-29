@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="기븐미니스트리 사역 소개 — '돈 되는 일'이 아니라 '복이 되는 일'. 지역 크리스천 문화를 살리고 하나님 나라를 이루기 위해 교회들이 함께 세운 문화사역 공동체입니다.">
 <meta name="twitter:image" content="https://givenministry.com/og-image.jpg?v=2">
 
-<link rel="stylesheet" href="./style.css?v=charisma">
+<link rel="stylesheet" href="./style.css?v=timeline">
 </head>
 <body>
 
@@ -184,7 +184,9 @@
   <div class="container">
     <span class="label" data-fade="">연혁 · HISTORY</span>
     <h2 class="section-title" data-fade="">함께 걸어온 <em>시간들</em></h2>
-    <div class="timeline" data-fade="">
+    <div class="tl-wrap" data-fade="">
+    <div class="tl-scroll" id="tlScroll">
+    <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-year">2024</div>
         <div class="timeline-content">
@@ -224,6 +226,9 @@
         </div>
       </div>
     </div>
+    </div>
+    <div class="tl-hint" id="tlHint">위로 밀어 더 보기 ↑</div>
+    </div>
   </div>
 </section>
 
@@ -248,6 +253,27 @@
   btn.addEventListener('click',function(e){e.stopPropagation();drawer.classList.contains('open')?close():open();});
   overlay.addEventListener('click',close);
   drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+})();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('tlScroll'),hint=document.getElementById('tlHint');
+  if(!el)return;
+  function upd(){
+    var more=el.scrollHeight-el.clientHeight;
+    el.classList.toggle('no-more',more<=2);
+    el.classList.toggle('at-top',el.scrollTop<=2);
+    el.classList.toggle('at-end',el.scrollTop>=more-2);
+    if(hint)hint.classList.toggle('hide',more<=2||el.scrollTop>=more-2);
+  }
+  el.addEventListener('scroll',upd,{passive:true});
+  window.addEventListener('resize',upd);
+  // 마우스로 잡아 끌어올리기
+  var down=false,sy=0,st=0;
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;sy=e.clientY;st=el.scrollTop;el.classList.add('dragging');});
+  window.addEventListener('pointermove',function(e){if(!down)return;el.scrollTop=st-(e.clientY-sy);});
+  window.addEventListener('pointerup',function(){down=false;el.classList.remove('dragging');});
+  upd();setTimeout(upd,400);
 })();
 </script>
 </body>
