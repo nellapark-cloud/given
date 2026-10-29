@@ -421,3 +421,10 @@ a,.b-title{overflow-wrap:anywhere;}
 .nav-links a[href="./support.html"]:hover,.nav-links a[href="./support.html"].active{background:rgba(232,196,107,.20);border-color:#E8C46B;color:#FFF3CF!important;}
 .mobile-drawer a[href="./support.html"]{color:#F0D58C;font-weight:400;}
 .mobile-drawer a[href="./support.html"]::before{content:'♥';margin-right:8px;font-size:11px;color:#E8C46B;}
+
+/* ABOUT — 받은 것(은사) 풀이 */
+.gift-def{max-width:640px;margin-top:40px;position:relative;z-index:1;}
+.gift-def .dict-head{margin:0 0 20px;}
+.gift-def .body-text{font-size:15px;line-height:2;}
+.gift-ref{margin-top:14px;font-family:'Noto Sans KR',sans-serif;font-size:12px;letter-spacing:.06em;color:rgba(232,196,107,.8);}
+@media(max-width:700px){.gift-def{margin-top:28px;}.gift-def .body-text{font-size:14px;}}
