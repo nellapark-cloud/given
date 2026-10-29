@@ -414,3 +414,10 @@ a,.b-title{overflow-wrap:anywhere;}
 .rg-cheonan{background:linear-gradient(160deg,rgba(110,84,44,.40),rgba(30,34,44,.5))!important;border-color:rgba(210,170,110,.30)!important;}
 .region-cheonan{color:#EBCB98;background:rgba(200,150,80,.14);border:1px solid rgba(210,170,110,.35);}
 .pl-cheonan{background:linear-gradient(160deg,#2C2619 0%,#1C1B20 55%,#29251D 100%);}
+
+/* NAV — 후원 강조 */
+.nav-links a[href="./support.html"]{color:#F0D58C!important;border:1px solid rgba(232,196,107,.55);background:rgba(232,196,107,.10);padding:8px 16px;border-radius:100px;transition:background .3s,border-color .3s,color .3s;}
+.nav-links a[href="./support.html"]::before{content:'♥';margin-right:6px;font-size:10px;color:#E8C46B;}
+.nav-links a[href="./support.html"]:hover,.nav-links a[href="./support.html"].active{background:rgba(232,196,107,.20);border-color:#E8C46B;color:#FFF3CF!important;}
+.mobile-drawer a[href="./support.html"]{color:#F0D58C;font-weight:400;}
+.mobile-drawer a[href="./support.html"]::before{content:'♥';margin-right:8px;font-size:11px;color:#E8C46B;}
