@@ -442,3 +442,6 @@ a,.b-title{overflow-wrap:anywhere;}
 .tl-hint{margin-top:10px;text-align:center;font-family:'Noto Sans KR',sans-serif;font-size:12px;letter-spacing:.12em;color:var(--muted);transition:opacity .3s;animation:pulse 2.4s ease-in-out infinite;}
 @media(max-width:700px){.tl-scroll{max-height:380px;}}
 .tl-hint.hide{visibility:hidden;animation:none;}
+.pl-hongseong{background:linear-gradient(160deg,#2D2A20 0%,#1E1C17 55%,#29261D 100%);}
+.region-hongseong{color:#E6D3A0;background:rgba(200,170,100,.14);border:1px solid rgba(210,180,110,.35);}
+.rg-hongseong{background:linear-gradient(160deg,rgba(110,96,60,.38),rgba(40,34,30,.5))!important;border-color:rgba(210,180,110,.30)!important;}
