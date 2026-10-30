@@ -446,3 +446,28 @@ a,.b-title{overflow-wrap:anywhere;}
 .region-hongseong{color:#E6D3A0;background:rgba(200,170,100,.14);border:1px solid rgba(210,180,110,.35);}
 .rg-hongseong{background:linear-gradient(160deg,rgba(110,96,60,.38),rgba(40,34,30,.5))!important;border-color:rgba(210,180,110,.30)!important;}
 .plaque-name-long{font-size:clamp(16px,1.7vw,20px)!important;letter-spacing:.04em!important;}
+
+/* CHURCH SPACE USES + MODAL */
+.plaque[data-church]{cursor:pointer;padding-bottom:40px;}
+.plaque[data-church]:focus-visible{outline:2px solid #E8C46B;outline-offset:3px;}
+.plaque-uses{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin-top:14px;}
+.plaque-uses span{font-family:'Noto Sans KR',sans-serif;font-size:10.5px;letter-spacing:.04em;color:rgba(240,221,176,.85);border:1px solid rgba(232,196,107,.28);background:rgba(232,196,107,.06);border-radius:100px;padding:2px 9px;}
+.church-modal{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(10,7,14,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+.church-modal.open{display:flex;}
+.church-modal-box{position:relative;width:100%;max-width:760px;max-height:88vh;overflow:auto;border-radius:16px;padding:32px;
+  background:linear-gradient(160deg,#2A2032,#1A1522);border:1px solid rgba(232,196,107,.35);box-shadow:0 30px 80px rgba(0,0,0,.55);animation:cmIn .25s ease;}
+@keyframes cmIn{from{opacity:0;transform:translateY(12px) scale(.98);}to{opacity:1;transform:none;}}
+.church-modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:1px solid var(--bdr);background:rgba(255,255,255,.05);color:var(--muted);font-size:20px;cursor:pointer;line-height:1;}
+.cm-head{text-align:center;margin-bottom:22px;}
+.cm-head h3{font-family:'Noto Serif KR',serif;font-size:26px;font-weight:500;color:#F0DDB0;margin:8px 0 4px;letter-spacing:.06em;}
+.cm-pastor{font-family:'Noto Sans KR',sans-serif;font-size:12px;letter-spacing:.16em;color:rgba(232,196,107,.7);}
+.cm-region{position:static!important;display:inline-block;}
+.cm-uses{margin-top:12px;}
+.cm-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.cm-ph{display:block;border-radius:10px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--bdr);}
+.cm-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.cm-ph:hover img{transform:scale(1.05);}
+.cm-ph-main{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;}
+.cm-empty{grid-column:1/-1;padding:48px 16px;text-align:center;border:1px dashed rgba(232,196,107,.3);border-radius:12px;color:var(--muted);font-size:14px;}
+@media(max-width:600px){.church-modal-box{padding:24px 16px;}.cm-gallery{grid-template-columns:1fr 1fr;}}
+.cm-region{font-family:'Noto Sans KR',sans-serif;font-size:10px;letter-spacing:.18em;padding:3px 10px;border-radius:100px;}
