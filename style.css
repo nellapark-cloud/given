@@ -445,3 +445,4 @@ a,.b-title{overflow-wrap:anywhere;}
 .pl-hongseong{background:linear-gradient(160deg,#2D2A20 0%,#1E1C17 55%,#29261D 100%);}
 .region-hongseong{color:#E6D3A0;background:rgba(200,170,100,.14);border:1px solid rgba(210,180,110,.35);}
 .rg-hongseong{background:linear-gradient(160deg,rgba(110,96,60,.38),rgba(40,34,30,.5))!important;border-color:rgba(210,180,110,.30)!important;}
+.plaque-name-long{font-size:clamp(16px,1.7vw,20px)!important;letter-spacing:.04em!important;}
