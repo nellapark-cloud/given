@@ -471,3 +471,15 @@ a,.b-title{overflow-wrap:anywhere;}
 .cm-empty{grid-column:1/-1;padding:48px 16px;text-align:center;border:1px dashed rgba(232,196,107,.3);border-radius:12px;color:var(--muted);font-size:14px;}
 @media(max-width:600px){.church-modal-box{padding:24px 16px;}.cm-gallery{grid-template-columns:1fr 1fr;}}
 .cm-region{font-family:'Noto Sans KR',sans-serif;font-size:10px;letter-spacing:.18em;padding:3px 10px;border-radius:100px;}
+/* compact plaques */
+.church-wall .plaque,.church-wall .plaque[data-church]{padding:18px 14px 30px;}
+.church-wall .plaque-orn{margin-bottom:6px;font-size:8px;}
+.church-wall .plaque-name{font-size:clamp(16px,1.6vw,19px)!important;letter-spacing:.06em!important;}
+.church-wall .plaque-name-long{font-size:clamp(14px,1.4vw,16px)!important;}
+.church-wall .plaque-pastor{margin-top:4px;font-size:11px;}
+.church-wall .plaque-uses{margin-top:8px;gap:4px;}
+.church-wall .plaque-uses span{font-size:9.5px;padding:1px 7px;}
+.church-wall .plaque::before,.church-wall .plaque::after{top:10px;width:5px;height:5px;}
+.church-wall .plaque::before{left:10px;}.church-wall .plaque::after{right:10px;}
+.church-wall .plaque .region-tag{bottom:8px;right:10px;}
+.church-wall{gap:12px;}
