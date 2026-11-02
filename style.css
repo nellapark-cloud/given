@@ -483,3 +483,17 @@ a,.b-title{overflow-wrap:anywhere;}
 .church-wall .plaque::before{left:10px;}.church-wall .plaque::after{right:10px;}
 .church-wall .plaque .region-tag{bottom:8px;right:10px;}
 .church-wall{gap:12px;}
+
+/* 사역 영역 카드 — 영역별 색 */
+.area-card{position:relative;border-top:3px solid var(--ac);background:linear-gradient(160deg,var(--abg) 0%,rgba(255,255,255,.015) 70%);border-color:var(--abd);border-top-color:var(--ac);}
+.area-card:hover{border-color:var(--ac);}
+.area-num{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.15em;color:var(--ac);margin-bottom:14px;}
+.area-title{font-size:16px;font-weight:500;margin-bottom:10px;}
+.area-en{font-family:'Noto Sans KR',sans-serif;font-size:10px;letter-spacing:.12em;font-weight:400;color:var(--ac);}
+.area-desc{font-size:13px;font-weight:300;line-height:1.9;color:var(--muted);}
+.area-music{--ac:#C4B0F5;--abg:rgba(150,120,230,.13);--abd:rgba(170,140,240,.3);}
+.area-art{--ac:#F0B7CF;--abg:rgba(200,110,150,.12);--abd:rgba(200,120,160,.3);}
+.area-space{--ac:#EBCB98;--abg:rgba(200,150,80,.11);--abd:rgba(210,170,110,.3);}
+.area-system{--ac:#A9E0D2;--abg:rgba(90,170,150,.11);--abd:rgba(110,180,165,.3);}
+.area-finance{--ac:#AFC2F5;--abg:rgba(107,135,220,.13);--abd:rgba(130,150,220,.3);}
+.area-prod{--ac:#F2AE9E;--abg:rgba(210,120,100,.11);--abd:rgba(220,140,120,.3);}
