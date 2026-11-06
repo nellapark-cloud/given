@@ -497,3 +497,21 @@ a,.b-title{overflow-wrap:anywhere;}
 .area-system{--ac:#A9E0D2;--abg:rgba(90,170,150,.11);--abd:rgba(110,180,165,.3);}
 .area-finance{--ac:#AFC2F5;--abg:rgba(107,135,220,.13);--abd:rgba(130,150,220,.3);}
 .area-prod{--ac:#F2AE9E;--abg:rgba(210,120,100,.11);--abd:rgba(220,140,120,.3);}
+
+/* TEAM — 멤버십 맨 위 + 섹션 머리 통일 */
+.member-first{border-top:none;padding-top:88px;background:radial-gradient(70% 90% at 50% 0%,rgba(167,139,250,.10),transparent 70%);}
+.board-sec{border-top:1px solid var(--bdr);}
+.collab-head{max-width:640px;}
+.collab-head .section-title{margin-bottom:28px;}
+.member-grid{gap:14px;}
+.member-chip{padding:14px 26px 14px 14px;transition:transform .3s,box-shadow .3s,border-color .3s;}
+.member-chip:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(167,139,250,.14);}
+.member-chip.rg{padding-right:72px;}
+.member-avatar{width:56px;height:56px;}
+.member-avatar img{border:2px solid rgba(167,139,250,.35);padding:2px;background:transparent;}
+.member-name{font-size:16px;}
+.member-join{text-decoration:none;color:var(--text);background:transparent;border:1px dashed rgba(167,139,250,.45);}
+.member-join .member-avatar{background:transparent;border:1px dashed rgba(167,139,250,.55);color:var(--violet);font-size:22px;font-weight:300;}
+.member-join .member-name{color:rgba(240,238,255,.8);}
+.member-join:hover{border-color:var(--violet);}
+@media(max-width:560px){.member-chip{flex:1 1 100%;}}
