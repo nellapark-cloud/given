@@ -515,3 +515,23 @@ a,.b-title{overflow-wrap:anywhere;}
 .member-join .member-name{color:rgba(240,238,255,.8);}
 .member-join:hover{border-color:var(--violet);}
 @media(max-width:560px){.member-chip{flex:1 1 100%;}}
+
+/* 참여신청 신호 — 깜빡이는 붉은 점 */
+.has-signal{position:relative;}
+.has-signal::after{content:'';position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:#ff3b4a;box-shadow:0 0 0 2px var(--bg,#16101f);animation:givenBlink 1.1s ease-in-out infinite;pointer-events:none;}
+.mobile-drawer .d-cta.has-signal::after{top:50%;right:18px;transform:translateY(-50%);}
+@keyframes givenBlink{0%,100%{opacity:1;box-shadow:0 0 0 2px var(--bg,#16101f),0 0 0 0 rgba(255,59,74,.6);}50%{opacity:.35;box-shadow:0 0 0 2px var(--bg,#16101f),0 0 0 7px rgba(255,59,74,0);}}
+@media (prefers-reduced-motion:reduce){.has-signal::after{animation:none;}}
+
+/* 신청자 목록 */
+.ap-wrap{max-width:760px;margin:72px auto 0;}
+.ap-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+.ap-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--bdr);}
+.ap-item{display:grid;grid-template-columns:80px 140px 1fr auto;gap:14px;align-items:center;padding:16px 4px;border-bottom:1px solid var(--bdr);font-size:14px;font-weight:300;}
+.ap-name{font-weight:500;}
+.ap-role{font-size:12px;color:var(--violet);}
+.ap-talent{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.ap-date{font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;}
+.ap-item.is-new .ap-name::after{content:'NEW';margin-left:8px;font-size:9px;letter-spacing:.1em;color:#ff5a66;vertical-align:middle;}
+.ap-empty{padding:28px 4px;text-align:center;color:var(--muted);font-size:13px;font-weight:300;border-bottom:1px solid var(--bdr);}
+@media(max-width:600px){.ap-item{grid-template-columns:1fr auto;row-gap:4px;}.ap-role{grid-column:1;}.ap-talent{grid-column:1/-1;white-space:normal;}.ap-date{grid-row:1;grid-column:2;}}
