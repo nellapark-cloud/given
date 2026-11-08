@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="기븐미니스트리 참여 신청 — 음악, 미술, 공간, 기획 등 어떤 재능이든 환영합니다. 당신의 재능이 사역이 됩니다.">
 <meta name="twitter:image" content="https://givenministry.com/og-image.jpg?v=2">
 
-<link rel="stylesheet" href="./style.css?v=signal">
+<link rel="stylesheet" href="./style.css?v=adm">
 <style>
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 48px 80px;background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 60%,var(--bg) 100%);}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 20%,rgba(124,92,232,0.18),transparent 60%),radial-gradient(ellipse 60% 50% at 80% 70%,rgba(144,119,184,0.1),transparent 60%);pointer-events:none;}
@@ -176,12 +176,36 @@
     <div class="ap-wrap" data-fade="">
       <div class="ap-head">
         <div><span class="label">함께하는 사람들 · APPLICANTS</span><h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.2vw,34px);font-weight:400;margin-top:6px;">함께하기로 한 <em style="color:var(--violet);">발걸음</em></h3></div>
-        <div style="font-size:12px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;font-weight:300;">총 <span id="applicantCount">0</span>명</div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:12px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;font-weight:300;">총 <span id="applicantCount" style="margin-left:-10px;">0</span>명<button type="button" class="adm-btn" onclick="admOpen()">🔒 신청내역 보기</button></div>
       </div>
       <ul class="ap-list" id="applicantList"><li class="ap-empty">불러오는 중...</li></ul>
     </div>
   </div>
 </section>
+
+<!-- 관리자 신청내역 -->
+<div class="adm-modal" id="admModal" role="dialog" aria-modal="true" aria-label="신청내역 (관리자)">
+  <div class="adm-box">
+    <button type="button" class="adm-x" onclick="admClose()" aria-label="닫기">&times;</button>
+    <div id="admLogin">
+      <span class="label">관리자 · ADMIN</span>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;margin:8px 0 18px;">신청내역 보기</h3>
+      <form onsubmit="admLogin(event)" style="display:flex;gap:10px;">
+        <input type="password" id="admPw" class="form-field" inputmode="numeric" autocomplete="off" placeholder="비밀번호" style="flex:1;">
+        <button type="submit" class="btn btn-primary" style="padding:12px 22px;">확인</button>
+      </form>
+      <p id="admMsg" style="margin-top:12px;font-size:12px;color:#ff7a84;min-height:18px;"></p>
+    </div>
+    <div id="admView" style="display:none;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:18px;">
+        <div><span class="label">관리자 · ADMIN</span><h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;margin-top:6px;">신청내역 <span id="admCount" style="font-size:16px;color:var(--muted);"></span></h3></div>
+        <div style="display:flex;gap:8px;"><button type="button" class="adm-btn" onclick="admLoad()">새로고침</button><button type="button" class="adm-btn" onclick="admLogout()">잠그기</button></div>
+      </div>
+      <div id="admList"></div>
+      <p style="margin-top:16px;font-size:11px;color:var(--muted);line-height:1.9;">목록에서 숨기려면 구글 드라이브의 '기븐 참여신청' 시트에서 해당 줄의 <b>공개</b> 칸을 N으로 바꾸세요.</p>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="footer-inner">
@@ -230,6 +254,45 @@ document.addEventListener('DOMContentLoaded',()=>{
   btn.addEventListener('click',function(e){e.stopPropagation();drawer.classList.contains('open')?close():open();});
   overlay.addEventListener('click',close);
   drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+})();
+</script>
+<script>
+(function(){
+  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function key(v){try{if(v===undefined)return sessionStorage.getItem('given_adm');if(v===null)sessionStorage.removeItem('given_adm');else sessionStorage.setItem('given_adm',v);}catch(e){}}
+  function fmt(t){var d=new Date(t);return d.getFullYear()+'. '+(d.getMonth()+1)+'. '+d.getDate()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');}
+  var modal=document.getElementById('admModal');
+  window.admOpen=function(){modal.classList.add('open');document.body.style.overflow='hidden';if(key()){admLoad();}else{show(false);setTimeout(function(){document.getElementById('admPw').focus();},50);}};
+  window.admClose=function(){modal.classList.remove('open');document.body.style.overflow='';};
+  modal.addEventListener('click',function(e){if(e.target===modal)admClose();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))admClose();});
+  function show(v){document.getElementById('admLogin').style.display=v?'none':'block';document.getElementById('admView').style.display=v?'block':'none';}
+  function fetchAdm(k){return fetch(window.GIVEN_API+'?key='+encodeURIComponent(k)).then(function(r){return r.json();});}
+  window.admLogin=function(e){
+    e.preventDefault();var k=document.getElementById('admPw').value.trim(),msg=document.getElementById('admMsg');
+    if(!k)return; msg.textContent='확인 중...';
+    fetchAdm(k).then(function(j){
+      if(j.ok){key(k);document.getElementById('admPw').value='';msg.textContent='';render(j.items);show(true);}
+      else msg.textContent=j.locked?'잘못된 시도가 많아 10분간 잠겼습니다.':'비밀번호가 맞지 않습니다.';
+    }).catch(function(){msg.textContent='연결에 실패했습니다. 잠시 후 다시 시도해 주세요.';});
+  };
+  window.admLoad=function(){
+    var k=key(); if(!k){show(false);return;}
+    document.getElementById('admList').innerHTML='<p style="color:var(--muted);font-size:13px;">불러오는 중...</p>';show(true);
+    fetchAdm(k).then(function(j){if(j.ok)render(j.items);else{key(null);show(false);}}).catch(function(){document.getElementById('admList').innerHTML='<p style="color:#ff7a84;font-size:13px;">불러오지 못했습니다.</p>';});
+  };
+  window.admLogout=function(){key(null);show(false);document.getElementById('admMsg').textContent='';};
+  function render(items){
+    document.getElementById('admCount').textContent='· '+items.length+'건';
+    document.getElementById('admList').innerHTML=items.length?items.map(function(a){
+      return '<div class="adm-card'+(String(a.pub).toUpperCase()==='N'?' is-hidden':'')+'">'+
+        '<div class="adm-top"><b>'+esc(a.name)+'</b><span class="adm-role">'+esc(a.role)+'</span>'+(String(a.pub).toUpperCase()==='N'?'<span class="adm-tag">비공개</span>':'')+'<span class="adm-date">'+fmt(a.t)+'</span></div>'+
+        '<div class="adm-line">'+(a.email?'<a href="mailto:'+esc(a.email)+'">'+esc(a.email)+'</a>':'')+(a.phone?'<a href="tel:'+esc(a.phone.replace(/[^0-9+]/g,''))+'">'+esc(a.phone)+'</a>':'')+'</div>'+
+        (a.talent?'<div class="adm-line"><span class="adm-k">재능·분야</span>'+esc(a.talent)+'</div>':'')+
+        (a.msg?'<div class="adm-msg">'+esc(a.msg).replace(/\n/g,'<br>')+'</div>':'')+
+      '</div>';
+    }).join(''):'<p style="color:var(--muted);font-size:13px;padding:20px 0;">아직 신청이 없습니다.</p>';
+  }
 })();
 </script>
 <script src="./given-signal.js?v=1"></script>
