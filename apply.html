@@ -149,25 +149,26 @@
     </div>
 
     <form class="main-form" id="applyForm" data-fade="" onsubmit="handleSubmit(event)">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-row">
-        <div class="form-group"><label class="form-label">이름 *</label><input type="text" class="form-field" placeholder="홍길동" required></div>
-        <div class="form-group"><label class="form-label">이메일 *</label><input type="email" class="form-field" placeholder="your@email.com" required></div>
+        <div class="form-group"><label class="form-label">이름 *</label><input type="text" name="이름" class="form-field" placeholder="홍길동" required></div>
+        <div class="form-group"><label class="form-label">이메일 *</label><input type="email" name="email" class="form-field" placeholder="your@email.com" required></div>
       </div>
       <div class="form-row">
-        <div class="form-group"><label class="form-label">연락처</label><input type="tel" class="form-field" placeholder="010-0000-0000"></div>
+        <div class="form-group"><label class="form-label">연락처</label><input type="tel" name="연락처" class="form-field" placeholder="010-0000-0000"></div>
         <div class="form-group"><label class="form-label">참여 유형 *</label>
-          <select class="form-field" required>
-            <option value="core">고정 멤버로 참여</option>
-            <option value="free">자율 멤버로 참여</option>
-            <option value="worship">예배만 참석</option>
-            <option value="inquiry">문의</option>
+          <select name="참여유형" class="form-field" required>
+            <option value="고정 멤버로 참여">고정 멤버로 참여</option>
+            <option value="자율 멤버로 참여">자율 멤버로 참여</option>
+            <option value="예배만 참석">예배만 참석</option>
+            <option value="문의">문의</option>
           </select>
         </div>
       </div>
-      <div class="form-group"><label class="form-label">재능 · 분야</label><input type="text" class="form-field" placeholder="음악 (피아노), 영상 편집, 공간 제공, 기획 등..."></div>
-      <div class="form-group"><label class="form-label">남기실 말씀</label><textarea class="form-field" rows="5" placeholder="간단한 소개나 궁금한 점을 적어주세요..."></textarea></div>
+      <div class="form-group"><label class="form-label">재능 · 분야</label><input type="text" name="재능분야" class="form-field" placeholder="음악 (피아노), 영상 편집, 공간 제공, 기획 등..."></div>
+      <div class="form-group"><label class="form-label">남기실 말씀</label><textarea name="남기실말씀" class="form-field" rows="5" placeholder="간단한 소개나 궁금한 점을 적어주세요..."></textarea></div>
       <div style="text-align:center;padding-top:8px;">
-        <button type="submit" class="btn btn-primary" style="font-size:18px;">신청 · 문의 보내기</button>
+        <button type="submit" id="applyBtn" class="btn btn-primary" style="font-size:18px;">신청 · 문의 보내기</button>
         <p style="margin-top:14px;font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;font-weight:300;line-height:2;">제출 후 담당자가 이메일 또는 연락처로 연락드립니다.</p>
       </div>
     </form>
@@ -185,9 +186,22 @@
 <script>
 function handleSubmit(e){
   e.preventDefault();
-  document.getElementById('applyForm').classList.add('hide');
-  document.getElementById('successBox').classList.add('show');
-  window.scrollTo({top:document.getElementById('contact').offsetTop-80,behavior:'smooth'});
+  var form=document.getElementById('applyForm'),btn=document.getElementById('applyBtn');
+  var data=Object.fromEntries(new FormData(form).entries());
+  data._subject='[GIVEN MINISTRY] 참여신청 · '+(data['이름']||'')+' ('+(data['참여유형']||'')+')';
+  data._template='table';
+  btn.disabled=true;var old=btn.textContent;btn.textContent='보내는 중...';
+  fetch('https://formsubmit.co/ajax/nellapark@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+    .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw new Error(j.message||'fail');});})
+    .then(function(){
+      form.classList.add('hide');
+      document.getElementById('successBox').classList.add('show');
+      window.scrollTo({top:document.getElementById('contact').offsetTop-80,behavior:'smooth'});
+    })
+    .catch(function(){
+      btn.disabled=false;btn.textContent=old;
+      alert('전송 중 문제가 생겼습니다. 잠시 후 다시 시도해 주세요.');
+    });
 }
 document.addEventListener('DOMContentLoaded',()=>{
   const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
