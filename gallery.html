@@ -30,7 +30,9 @@
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;grid-auto-rows:200px;}
 .photo{border-radius:8px;overflow:hidden;transition:transform 0.4s,box-shadow 0.4s;cursor:pointer;position:relative;}
 .photo:hover{transform:scale(1.02);box-shadow:0 12px 40px rgba(0,0,0,0.4);}
-.photo-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+.photo{display:block;padding:0;border:0;text-align:left;font:inherit;background:var(--card);width:100%;}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.photo.hide{display:none;}
 .photo-label{position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(to top,rgba(12,11,16,0.85),transparent);font-size:11px;color:rgba(240,238,255,0.8);font-family:'Noto Sans KR',sans-serif;font-weight:300;letter-spacing:0.08em;}
 .wide{grid-column:span 2;}
 .tall{grid-row:span 2;}
@@ -78,47 +80,24 @@
 <section>
   <div class="container">
     <div style="display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap;" data-fade="">
-      <button class="filter-btn active">전체</button>
-      <button class="filter-btn">공연</button>
-      <button class="filter-btn">전시</button>
-      <button class="filter-btn">예배</button>
-      <button class="filter-btn">일상</button>
+      <button class="filter-btn active" data-f="all">전체</button>
+      <button class="filter-btn" data-f="공연">공연</button>
+      <button class="filter-btn" data-f="예배">예배</button>
     </div>
     <div class="gallery-grid" data-fade="">
-      <div class="photo wide tall" style="background:linear-gradient(135deg,rgba(124,92,232,0.4),rgba(167,139,250,0.15));">
-        <div class="photo-inner"><span style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:rgba(167,139,250,0.35);">♪</span></div>
-        <div class="photo-label">제1회 기븐미니스트리 with 쉘위워십 · 2024.10</div>
-      </div>
-      <div class="photo" style="background:linear-gradient(135deg,rgba(144,119,184,0.3),rgba(144,119,184,0.08));">
-        <div class="photo-inner"><span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:rgba(144,119,184,0.35);">✦</span></div>
-        <div class="photo-label">빛 전시회 · 2024.08</div>
-      </div>
-      <div class="photo" style="background:linear-gradient(135deg,rgba(131,130,184,0.25),rgba(131,130,184,0.06));">
-        <div class="photo-inner"><span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:rgba(131,130,184,0.35);">◈</span></div>
-        <div class="photo-label">여름 집회 · 2024.07</div>
-      </div>
-      <div class="photo" style="background:linear-gradient(135deg,rgba(150,121,180,0.25),rgba(150,121,180,0.06));">
-        <div class="photo-inner"><span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:rgba(150,121,180,0.35);">✝</span></div>
-        <div class="photo-label">크리스마스 예배 · 2023.12</div>
-      </div>
-      <div class="photo wide" style="background:linear-gradient(135deg,rgba(119,136,188,0.2),rgba(119,136,188,0.05));">
-        <div class="photo-inner"><span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:rgba(119,136,188,0.35);">∞</span></div>
-        <div class="photo-label">문화사역 세미나 · 2023.11</div>
-      </div>
-      <div class="photo" style="background:linear-gradient(135deg,rgba(124,92,232,0.25),rgba(124,92,232,0.06));">
-        <div class="photo-inner"><span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:rgba(124,92,232,0.35);">♭</span></div>
-        <div class="photo-label">창립 기념 공연 · 2023.09</div>
-      </div>
-      <div class="photo" style="background:linear-gradient(135deg,rgba(144,119,184,0.2),rgba(167,139,250,0.1));">
-        <div class="photo-inner"><span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:rgba(240,238,255,0.2);">◇</span></div>
-        <div class="photo-label">월례 예배 · 2024.06</div>
-      </div>
+      <button type="button" class="photo wide tall" data-cat="공연" data-src="./images/sansung-autumn-01.jpg"><img src="./images/sansung-autumn-01.jpg" alt="산성 온가족 가을 음악회 with GIVEN MINISTRY · 2026.10" loading="lazy" style="object-position:center 40%;"><span class="photo-label">산성 온가족 가을 음악회 with GIVEN MINISTRY · 2026.10</span></button>
+      <button type="button" class="photo tall" data-cat="공연" data-src="./images/jang-01.jpg"><img src="./images/jang-01.jpg" alt="장성규 선교사 클라리넷 연주회 · 2026.05" loading="lazy" style="object-position:center 30%;"><span class="photo-label">장성규 선교사 클라리넷 연주회 · 2026.05</span></button>
+      <button type="button" class="photo " data-cat="공연" data-src="./images/jang-02.jpg"><img src="./images/jang-02.jpg" alt="클라리넷과 기타 협연 · 2026.05" loading="lazy" style="object-position:center 35%;"><span class="photo-label">클라리넷과 기타 협연 · 2026.05</span></button>
+      <button type="button" class="photo " data-cat="공연" data-src="./images/concert-02-sim-samjong.jpg?v=2"><img src="./images/concert-02-sim-samjong.jpg?v=2" alt="심삼종 교수 초청 연주회 · 2026.08" loading="lazy" style="object-position:center 22%;"><span class="photo-label">심삼종 교수 초청 연주회 · 2026.08</span></button>
+      <button type="button" class="photo wide" data-cat="예배" data-src="./images/shellwe-cheonan.jpg"><img src="./images/shellwe-cheonan.jpg" alt="제1회 기븐미니스트리 with 쉘위워십 · 2024.10" loading="lazy" style="object-position:center 60%;"><span class="photo-label">제1회 기븐미니스트리 with 쉘위워십 · 2024.10</span></button>
+      <button type="button" class="photo wide" data-cat="공연" data-src="./images/jang-03.jpg"><img src="./images/jang-03.jpg" alt="장성규 선교사 연주회 단체사진 · 2026.05" loading="lazy" style="object-position:center 55%;"><span class="photo-label">장성규 선교사 연주회 단체사진 · 2026.05</span></button>
     </div>
-    <div style="margin-top:40px;text-align:center;padding:40px;border:1.5px dashed rgba(167,139,250,0.2);border-radius:12px;" data-fade="">
-      <p style="font-size:13px;color:var(--muted);font-weight:300;font-family:'Noto Sans KR',sans-serif;line-height:2;">사진은 실제 활동 사진으로 업데이트될 예정입니다.<br>갤러리에 추가하고 싶은 사진이 있으시면 운영진에게 전달해 주세요.</p>
+    <div style="margin-top:40px;text-align:center;padding:32px;border:1.5px dashed rgba(167,139,250,0.2);border-radius:12px;" data-fade="">
+      <p style="font-size:13px;color:var(--muted);font-weight:300;font-family:'Noto Sans KR',sans-serif;line-height:2;">사역 현장의 사진을 계속 채워가고 있습니다.<br>갤러리에 함께 나누고 싶은 사진이 있으시면 운영진에게 전달해 주세요.</p>
     </div>
   </div>
 </section>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightboxImg" alt=""></div>
 
 <footer>
   <div class="footer-inner">
@@ -127,7 +106,7 @@
     <div class="footer-copy">© 2025 GIVEN MINISTRY</div>
   </div>
 </footer>
-<script>document.addEventListener('DOMContentLoaded',()=>{const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:0.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('[data-fade]').forEach(el=>obs.observe(el));document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');});});});</script>
+<script>document.addEventListener('DOMContentLoaded',()=>{const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:0.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('[data-fade]').forEach(el=>obs.observe(el));document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.f;document.querySelectorAll('.photo').forEach(p=>p.classList.toggle('hide',f!=='all'&&p.dataset.cat!==f));});});const lb=document.getElementById('lightbox'),im=document.getElementById('lightboxImg');document.querySelectorAll('.photo').forEach(p=>p.addEventListener('click',()=>{im.src=p.dataset.src;im.alt=p.querySelector('img').alt;lb.classList.add('open');}));lb.addEventListener('click',()=>lb.classList.remove('open'));document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open');});});</script>
 
 
 <script>
