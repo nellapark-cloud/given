@@ -30,6 +30,18 @@
 .news-item{padding:32px 0;border-bottom:1px solid var(--bdr);display:flex;gap:32px;align-items:flex-start;transition:background 0.2s;cursor:pointer;}
 .news-item:hover{background:rgba(167,139,250,0.03);}
 .news-date{flex-shrink:0;width:64px;font-size:11px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;font-weight:300;line-height:1.7;}
+.yn-vision{margin-top:64px;}
+.yn-5c{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+.yn-5c li{background:rgba(48,34,58,.45);border:1px solid var(--bdr);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:6px;}
+.yn-5c b{font-family:'Noto Sans KR',sans-serif;font-size:11px;letter-spacing:.2em;color:#E8C46B;font-weight:500;}
+.yn-5c span{font-size:15px;color:var(--text);}
+.yn-5c small{font-size:12px;color:var(--muted);line-height:1.6;font-family:'Noto Sans KR',sans-serif;}
+.yn-gallery{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.yn-gallery a{display:block;border-radius:12px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.06);transition:transform .3s;}
+.yn-gallery a:hover{transform:translateY(-3px);}
+.yn-gallery img{width:100%;display:block;}
+@media(max-width:900px){.yn-5c{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.yn-5c{grid-template-columns:1fr;}.yn-gallery{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -73,23 +85,42 @@
   <div class="container">
     <div class="two-col" style="align-items:center;">
       <div style="flex:0 0 420px;max-width:100%;" data-fade="">
-        <figure class="notice-poster"><img src="./images/notice-sansung-autumn-2026.jpg" alt="찬양사역자 초청예배 — 산성 온가족 가을 음악회 포스터" loading="lazy"></figure>
+        <figure class="notice-poster"><a href="./images/notice-yeneung-poster.jpg" target="_blank" rel="noopener"><img src="./images/notice-yeneung-poster.jpg" alt="예능교회 창립감사예배 포스터 — 12월 6일(주일) 오후 4시" loading="lazy"></a></figure>
       </div>
       <div style="flex:1;" data-fade="">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
-          <span class="tag" style="background:rgba(232,196,107,0.14);color:#E8C46B;">초청예배</span>
-          <span style="font-size:12px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;">2026. 10. 21</span>
+          <span class="tag" style="background:rgba(232,196,107,0.14);color:#E8C46B;">협력위원 소식</span>
+          <span style="font-size:12px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;">2026. 11. 14</span>
         </div>
-        <div style="font-size:13px;letter-spacing:.2em;color:var(--violet);font-family:'Noto Sans KR',sans-serif;margin-bottom:10px;">찬양사역자 초청예배</div>
-        <h2 class="section-title" style="margin-bottom:14px;">산성 온가족 <em>가을 음악회</em></h2>
-        <p class="body-text" style="margin-bottom:28px;">온 가족이 함께 드리는 찬양과 은혜의 시간. 기븐미니스트리가 산성침례교회의 초청을 받아 찬양으로 함께합니다.</p>
+        <div style="font-size:13px;letter-spacing:.2em;color:var(--violet);font-family:'Noto Sans KR',sans-serif;margin-bottom:10px;">박군오 목사 · 예능교회</div>
+        <h2 class="section-title" style="margin-bottom:14px;">예능교회 <em>창립감사예배</em></h2>
+        <p class="body-text" style="margin-bottom:16px;">기븐미니스트리 협력위원 박군오 목사님이 대전에 <b>예능교회</b>(THE POWER OF JESUS)를 개척하고 첫 예배를 드립니다. 예수의 능력으로 복음을 전하는 예능교회의 첫걸음에 함께해 주세요.</p>
+        <p class="body-text" style="margin-bottom:28px;font-size:14px;color:var(--muted);">예능교회는 기독교한국침례회 대전지방회 소속 교회로, 바른 신학과 성경적 가치를 추구하며 변하지 않는 복음을 온·오프라인에서 나누는 공동체를 세워가고자 합니다.</p>
         <div class="sww-info">
-          <div class="sww-row"><span class="sww-k">일시</span><span class="sww-v">2026년 10월 23일 (금) <b>저녁 8시 20분</b></span></div>
-          <div class="sww-row"><span class="sww-k">장소</span><span class="sww-v"><b>산성침례교회</b> 3층 본당</span></div>
-          <div class="sww-row"><span class="sww-k">찬양</span><span class="sww-v"><b>박동준 목사 · 곽유숙 사모</b><small>기븐미니스트리</small></span></div>
-          <div class="sww-row"><span class="sww-k">협력</span><span class="sww-v">음향·조명 시설 협력 · 애니커뮤니티<small>최희돈 목사 · 황인용 전도사</small></span></div>
+          <div class="sww-row"><span class="sww-k">일시</span><span class="sww-v">2026년 12월 6일 (주일) <b>오후 4시</b></span></div>
+          <div class="sww-row"><span class="sww-k">장소</span><span class="sww-v"><b>대전시 동구 태전로 18, 7층</b><small>수협건물</small></span></div>
+          <div class="sww-row"><span class="sww-k">주차</span><span class="sww-v">대전시 동구 중앙로193번길 49<small>공영주차장</small></span></div>
+          <div class="sww-row"><span class="sww-k">섬김</span><span class="sww-v"><b>박군오 목사 · 유수영 사모</b><small>기독교한국침례회 대전지방회</small></span></div>
+          <div class="sww-row"><span class="sww-k">문의</span><span class="sww-v"><a href="tel:010-4390-3511" style="color:inherit;">010-4390-3511</a></span></div>
         </div>
       </div>
+    </div>
+
+    <div class="yn-vision" data-fade="">
+      <span class="label">VISION 5C · 예능교회가 꿈꾸는 교회</span>
+      <ul class="yn-5c">
+        <li><b>CHRIST</b><span>예수 중심</span><small>모든 것의 중심은 예수 그리스도</small></li>
+        <li><b>COMMUNITY</b><span>사람이 연결되는 공동체</span><small>혼자가 아니라 함께 믿습니다</small></li>
+        <li><b>CONTENT</b><span>복음을 오늘의 언어로</span><small>예배·책·음악·AI 등 다양한 콘텐츠로</small></li>
+        <li><b>CONNECTION</b><span>신앙과 삶을 연결</span><small>교회 안과 밖, 온라인과 오프라인</small></li>
+        <li><b>CALLING</b><span>다시 삶의 자리로</span><small>삶의 자리에서 예수님의 능력이 나타나도록</small></li>
+      </ul>
+    </div>
+
+    <div class="yn-gallery" data-fade="">
+      <a href="./images/notice-yeneung-invite.jpg" target="_blank" rel="noopener"><img src="./images/notice-yeneung-invite.jpg" alt="예능교회 창립감사예배 초대 — 우리의 첫 예배, 당신을 초대합니다" loading="lazy"></a>
+      <a href="./images/notice-yeneung-greeting.jpg" target="_blank" rel="noopener"><img src="./images/notice-yeneung-greeting.jpg" alt="예능교회 소개 — 박군오 목사 · 유수영 사모 인사말" loading="lazy"></a>
+      <a href="./images/notice-yeneung-vision.jpg" target="_blank" rel="noopener"><img src="./images/notice-yeneung-vision.jpg" alt="예능교회 VISION 5C" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -108,6 +139,12 @@
 <script>
 /* 지난 공지 — 새 글은 맨 위에 추가하면 됩니다 */
 var PAST_NOTICES = [
+ {
+  "date": "2026.10.21",
+  "tag": "초청예배",
+  "title": "산성 온가족 가을 음악회 with GIVEN MINISTRY",
+  "body": "2026년 10월 23일(금) 저녁 8시 20분, 산성침례교회 3층 본당에서 온 가족이 함께하는 가을 음악회가 열렸습니다. 기븐미니스트리 박동준 목사·곽유숙 사모가 찬양으로 섬겼고, 애니커뮤니티(최희돈 목사·황인용 전도사)가 음향·조명으로 협력했습니다."
+ },
  {
   "date": "2025.07.01",
   "tag": "공지",
