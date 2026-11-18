@@ -36,6 +36,17 @@
 .yn-5c b{font-family:'Noto Sans KR',sans-serif;font-size:11px;letter-spacing:.2em;color:#E8C46B;font-weight:500;}
 .yn-5c span{font-size:15px;color:var(--text);}
 .yn-5c small{font-size:12px;color:var(--muted);line-height:1.6;font-family:'Noto Sans KR',sans-serif;}
+.yn-order{margin-top:64px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start;}
+.yn-order-list{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--bdr);}
+.yn-order-list li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:13px 4px;border-bottom:1px solid var(--bdr);font-family:'Noto Sans KR',sans-serif;}
+.yn-order-list b{font-size:14px;color:var(--text);font-weight:500;}
+.yn-order-list span{font-size:14px;color:var(--muted);}
+.yn-order-list small{display:block;font-size:12px;color:var(--muted);opacity:.75;margin-top:2px;}
+.yn-order-list .yn-hl b,.yn-order-list .yn-hl span{color:#E8C46B;}
+.yn-order-img{display:block;border-radius:12px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.06);}
+.yn-order-img img{width:100%;display:block;}
+@media(max-width:900px){.yn-order{grid-template-columns:1fr;}.yn-order-img{max-width:360px;}}
+@media(max-width:600px){.yn-order-list li{grid-template-columns:110px 1fr;}}
 .yn-gallery{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .yn-gallery a{display:block;border-radius:12px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.06);transition:transform .3s;}
 .yn-gallery a:hover{transform:translateY(-3px);}
@@ -115,6 +126,28 @@
         <li><b>CONNECTION</b><span>신앙과 삶을 연결</span><small>교회 안과 밖, 온라인과 오프라인</small></li>
         <li><b>CALLING</b><span>다시 삶의 자리로</span><small>삶의 자리에서 예수님의 능력이 나타나도록</small></li>
       </ul>
+    </div>
+
+    <div class="yn-order" data-fade="">
+      <div>
+        <span class="label">ORDER OF WORSHIP · 창립감사예배 순서</span>
+        <ul class="yn-order-list">
+          <li><b>예배의 부름</b><span>박군오 목사 · 예능교회</span></li>
+          <li><b>찬양</b><span>신수진 목사 · 새노래교회</span></li>
+          <li><b>대표기도</b><span>박대일 목사 · 노은하나교회</span></li>
+          <li><b>성경봉독</b><span>박군오 목사 · 예능교회</span></li>
+          <li><b>창립감사설교</b><span>조성봉 목사 · 함열침례교회</span></li>
+          <li class="yn-hl"><b>특별찬양</b><span>박동준 목사 · 은혜교회</span></li>
+          <li><b>교회창립 공포</b><span>박대일 목사 · 대전지방회장</span></li>
+          <li><b>축사</b><span>김웅식 목사 · 범화교회</span></li>
+          <li><b>봉헌찬송</b><span>다같이</span></li>
+          <li><b>봉헌기도</b><span>이고선 목사 · 대전서문교회<small>대전지방회 전도부장</small></span></li>
+          <li><b>교회소개 및 광고</b><span>박군오 목사 · 예능교회</span></li>
+          <li><b>찬양</b><span>다같이</span></li>
+          <li><b>축도</b><span>김만석 목사 · 온직교회<small>대전지방회 부회장</small></span></li>
+        </ul>
+      </div>
+      <a class="yn-order-img" href="./images/notice-yeneung-order.jpg" target="_blank" rel="noopener"><img src="./images/notice-yeneung-order.jpg" alt="예능교회 창립감사예배 순서지 — 2026년 12월 6일(주일) 오후 4시" loading="lazy"></a>
     </div>
 
     <div class="yn-gallery" data-fade="">
