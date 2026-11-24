@@ -688,3 +688,45 @@ footer{background:#1C0E19;}
 .lt .plaque .region-iksan{color:#A9E0D2;background:rgba(90,170,150,.14);border-color:rgba(110,180,165,.35);}
 .lt .plaque .region-cheonan{color:#EBCB98;background:rgba(200,150,80,.14);border-color:rgba(210,170,110,.35);}
 .lt .plaque .region-hongseong{color:#E6D3A0;background:rgba(200,170,100,.14);border-color:rgba(210,180,110,.35);}
+
+/* 모바일 메뉴 — 닫혀 있을 때 그림자가 화면 오른쪽에 비치지 않게 */
+.mobile-drawer{box-shadow:none;visibility:hidden;transition:transform .32s ease,visibility 0s linear .32s;}
+.mobile-drawer.open{box-shadow:-8px 0 48px rgba(0,0,0,.5);visibility:visible;transition:transform .32s ease,visibility 0s;}
+
+/* ABOUT — 실질 소개 */
+.about-lead{margin-top:24px;max-width:620px;color:var(--tx-hi);font-size:16px;line-height:1.95;}
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.glance-item{background:#fff;border:1px solid var(--bdr);border-radius:12px;padding:22px 20px;box-shadow:0 1px 2px rgba(58,30,51,.04),0 8px 24px rgba(58,30,51,.05);}
+.glance-k{display:block;font-family:'Noto Sans KR',sans-serif;font-size:12px;letter-spacing:.14em;color:var(--violet);margin-bottom:10px;}
+.glance-item b{display:block;font-weight:500;font-size:15px;line-height:1.65;color:var(--text);}
+.do-list{display:flex;flex-direction:column;gap:22px;}
+.do-row{display:grid;grid-template-columns:340px 1fr;gap:0;background:#fff;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(58,30,51,.04),0 10px 28px rgba(58,30,51,.06);}
+.do-img{width:100%;height:100%;min-height:240px;object-fit:cover;display:block;}
+.do-body{padding:28px 32px;}
+.do-num{font-family:'Noto Sans KR',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--violet);margin-bottom:10px;}
+.do-title{font-size:20px;font-weight:500;line-height:1.45;margin-bottom:10px;}
+.do-desc{font-size:14.5px;font-weight:300;line-height:1.9;color:#4E3446;margin-bottom:14px;}
+.do-desc b{font-weight:500;color:var(--violet);}
+.do-facts{list-style:none;margin:0 0 16px;padding:0;border-top:1px solid var(--bdr);}
+.do-facts li{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--bdr);font-family:'Noto Sans KR',sans-serif;font-size:13.5px;color:var(--text);line-height:1.6;}
+.do-facts span{flex:0 0 84px;color:var(--muted);font-size:12.5px;}
+.do-link{font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--violet);text-decoration:none;font-weight:500;}
+.do-link:hover{text-decoration:underline;}
+.join-ways{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;}
+.join-way{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--text);background:linear-gradient(160deg,#3A1E33,#26131F);border-radius:12px;padding:22px 22px 20px;transition:transform .3s;}
+.join-way:hover{transform:translateY(-3px);}
+.join-way b{color:#FFF4F8;font-weight:500;font-size:16px;}
+.join-way span{color:rgba(255,240,246,.72);font-size:13px;font-weight:300;line-height:1.7;font-family:'Noto Sans KR',sans-serif;}
+.join-way i{font-style:normal;color:#E8C46B;font-size:12.5px;font-family:'Noto Sans KR',sans-serif;margin-top:4px;}
+@media(max-width:900px){.glance{grid-template-columns:1fr 1fr;}.do-row{grid-template-columns:1fr;}.do-img{min-height:0;aspect-ratio:16/9;height:auto;}.join-ways{grid-template-columns:1fr;}}
+@media(max-width:520px){.glance{grid-template-columns:1fr;}.do-body{padding:22px 20px;}.do-title{font-size:18px;}}
+/* HOME — 실질 소개 카드 */
+.home-do{display:block;text-decoration:none;color:var(--text);border-top:3px solid var(--violet);}
+.home-do-num{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--violet);margin-bottom:12px;}
+.home-do h3{font-size:18px;font-weight:500;margin-bottom:10px;}
+.home-do p{font-size:14px;font-weight:300;line-height:1.85;color:#4E3446;margin-bottom:14px;}
+.home-do-link{font-family:'Noto Sans KR',sans-serif;font-size:12.5px;color:var(--violet);font-weight:500;}
+.home-recent{display:block;text-decoration:none;color:var(--text);padding:0;overflow:hidden;}
+.home-recent img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;}
+.home-recent-date{padding:16px 20px 0;font-size:12px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;}
+.home-recent h3{padding:6px 20px 20px;font-size:16px;font-weight:500;}
