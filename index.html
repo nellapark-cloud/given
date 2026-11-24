@@ -59,27 +59,27 @@
 <meta name="twitter:description" content="기븐미니스트리(GIVEN MINISTRY)는 중부권(대전·세종·충청·전북) 사역자와 교회들이 함께하는 크리스천 문화사역 공동체입니다. 음악·미술·공간·기획 등 각자 받은 재능으로 하나님을 영화롭게 하며, 쉘위워십과 함께 매월 예배를 드립니다.">
 <meta name="twitter:image" content="https://givenministry.com/og-image.jpg?v=2">
 
-<link rel="stylesheet" href="./style.css?v=units">
+<link rel="stylesheet" href="./style.css?v=lightB">
 <style>
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:100px 48px 80px;}
 .hero-bg{position:absolute;inset:0;z-index:2;background:
-  radial-gradient(ellipse 80% 60% at 15% 15%,rgba(124,92,232,0.16),transparent 55%),
+  radial-gradient(ellipse 80% 60% at 15% 15%,rgba(var(--acc2-rgb),0.16),transparent 55%),
   radial-gradient(ellipse 60% 50% at 85% 75%,rgba(144,119,184,0.12),transparent 55%),
   radial-gradient(ellipse 40% 40% at 70% 20%,rgba(131,130,184,0.08),transparent 60%),
   radial-gradient(ellipse 50% 40% at 30% 80%,rgba(150,121,180,0.06),transparent 60%);
   pointer-events:none;}
-.hero-blob1{position:absolute;top:12%;right:8%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,0.22),transparent 70%);animation:floatY 6s ease-in-out infinite;pointer-events:none;z-index:2;}
+.hero-blob1{position:absolute;top:12%;right:8%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb),0.22),transparent 70%);animation:floatY 6s ease-in-out infinite;pointer-events:none;z-index:2;}
 .hero-blob2{position:absolute;bottom:18%;left:6%;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(144,119,184,0.18),transparent 70%);animation:floatY 8s ease-in-out 2s infinite;pointer-events:none;z-index:2;}
 .hero-blob3{position:absolute;top:55%;right:4%;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(131,130,184,0.2),transparent 70%);animation:floatY 7s ease-in-out 1s infinite;pointer-events:none;z-index:2;}
 .hero-blob4{position:absolute;top:20%;left:10%;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(150,121,180,0.14),transparent 70%);animation:floatY 9s ease-in-out 3s infinite;pointer-events:none;z-index:2;}
 .hero-blob5{position:absolute;bottom:35%;right:18%;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(119,136,188,0.22),transparent 70%);animation:floatY 5.5s ease-in-out 0.5s infinite;pointer-events:none;z-index:2;}
 .hero-blob6{position:absolute;bottom:10%;left:30%;width:60px;height:60px;border-radius:50%;background:radial-gradient(circle,rgba(144,119,184,0.25),transparent 70%);animation:floatY 6.5s ease-in-out 4s infinite;pointer-events:none;z-index:2;}
 
-.hero-letter{position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(180px,26vw,380px);font-weight:600;user-select:none;pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%);;background:linear-gradient(135deg,rgba(167,139,250,0.09),rgba(150,121,180,0.04));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap;letter-spacing:-0.02em;z-index:2;}
+.hero-letter{position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(180px,26vw,380px);font-weight:600;user-select:none;pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%);;background:linear-gradient(135deg,rgba(var(--acc-rgb),0.09),rgba(150,121,180,0.04));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap;letter-spacing:-0.02em;z-index:2;}
 .hero-inner{text-align:center;max-width:780px;position:relative;z-index:3;}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(64px,10vw,136px);font-weight:500;line-height:0.9;letter-spacing:0.04em;margin-bottom:12px;animation:heroUp 1.1s 0.2s ease both,textShimmer 14s linear 1.5s infinite,textGlow 4s ease-in-out 1.5s infinite;background:linear-gradient(90deg,#FFF6DD 20%,#F3CA6B 35%,#fff 50%,#E8C46B 65%,#FFF6DD 80%);background-size:250% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(13px,2vw,20px);font-weight:300;letter-spacing:0.5em;color:var(--violet);margin-bottom:40px;animation:heroUp 1.1s 0.3s ease both;}
-.hero-desc{font-size:clamp(14px,1.6vw,17px);font-weight:300;line-height:2.1;color:rgba(240,238,255,0.65);max-width:480px;margin:0 auto 48px;animation:heroUp 1.1s 0.42s ease both;}
+.hero-desc{font-size:clamp(14px,1.6vw,17px);font-weight:300;line-height:2.1;color:var(--tx-mid);max-width:480px;margin:0 auto 48px;animation:heroUp 1.1s 0.42s ease both;}
 .hero-region{display:inline-block;margin-top:22px;padding:6px 16px;border-radius:100px;border:1px solid rgba(232,196,107,.35);background:rgba(232,196,107,.06);color:rgba(240,221,176,.9);font-family:'Noto Sans KR',sans-serif;font-size:12px;letter-spacing:.06em;line-height:1.6;}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:heroUp 1.1s 0.54s ease both;}
 .hero-badges{display:flex;gap:16px;justify-content:center;margin-top:52px;animation:heroUp 1.1s 0.66s ease both;}
@@ -106,7 +106,7 @@
 .worship-dt-val{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;}
 .worship-dt-sub{font-size:12px;color:var(--muted);margin-top:2px;font-family:'Noto Sans KR',sans-serif;font-weight:300;}
 .cta-section{padding:100px 48px;position:relative;overflow:hidden;text-align:center;}
-.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(124,92,232,0.12),transparent 70%);pointer-events:none;}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(var(--acc2-rgb),0.12),transparent 70%);pointer-events:none;}
 .cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,60px);font-weight:400;line-height:1.2;margin-bottom:20px;}
 </style>
 </head>
@@ -142,7 +142,7 @@
 <div class="mobile-overlay" id="mobileOverlay"></div>
 
 <!-- HERO -->
-<section class="hero">
+<section data-band="dark" class="hero">
   <div class="hero-bg"></div>
   <div class="hero-blob1"></div>
   <div class="hero-blob2"></div>
@@ -155,21 +155,21 @@
     <span class="label" style="animation:heroUp 1s 0.1s ease both;display:block;margin-bottom:28px;">GIVEN MINISTRY · 문화사역 공동체</span>
     <h1 class="hero-title">GIVEN</h1>
     <div class="hero-sub">M I N I S T R Y</div>
-    <p class="hero-desc"><span style="color:rgba(240,238,255,0.92);">예술을 통해 그리스도의 문화를<br>확장해가는 중부권 사역팀</span><br><span style="font-size:0.88em;">각자 받은 재능과 자원으로 하나님을 영화롭게 합니다</span><span class="hero-region">중부권 사역자들을 위한 단체 · 대전 · 세종 · 익산 · 홍성</span></p>
+    <p class="hero-desc"><span style="color:var(--tx-hi);">예술을 통해 그리스도의 문화를<br>확장해가는 중부권 사역팀</span><br><span style="font-size:0.88em;">각자 받은 재능과 자원으로 하나님을 영화롭게 합니다</span><span class="hero-region">중부권 사역자들을 위한 단체 · 대전 · 세종 · 익산 · 홍성</span></p>
     <div class="hero-btns">
       <a href="./about.html" class="btn btn-primary">사역 소개 보기</a>
       <a href="./apply.html" class="btn btn-outline">참여 신청하기</a>
     </div>
     <div class="hero-badges">
-      <button class="badge" type="button" onclick="openGivenModal('G')"><div class="badge-icon" style="background:linear-gradient(135deg,#5B4E88,#8478B0);">G</div><span class="badge-text">Glorify</span></button>
-      <button class="badge" type="button" onclick="openGivenModal('I')"><div class="badge-icon" style="background:linear-gradient(135deg,#643CB3,#956AD9);">I</div><span class="badge-text">Inspire</span></button>
-      <button class="badge" type="button" onclick="openGivenModal('V')"><div class="badge-icon" style="background:linear-gradient(135deg,#4242B9,#7876D8);">V</div><span class="badge-text">Vision</span></button>
-      <button class="badge" type="button" onclick="openGivenModal('E')"><div class="badge-icon" style="background:linear-gradient(135deg,#6B40B4,#A06CD6);">E</div><span class="badge-text">Engage</span></button>
-      <button class="badge" type="button" onclick="openGivenModal('N')"><div class="badge-icon" style="background:linear-gradient(135deg,#3A54B7,#6B87DC);">N</div><span class="badge-text">Nurture</span></button>
+      <button class="badge" type="button" onclick="openGivenModal('G')"><div class="badge-icon" style="background:linear-gradient(135deg,#6E2A50,#A0577E);">G</div><span class="badge-text">Glorify</span></button>
+      <button class="badge" type="button" onclick="openGivenModal('I')"><div class="badge-icon" style="background:linear-gradient(135deg,#8E3B63,#C07399);">I</div><span class="badge-text">Inspire</span></button>
+      <button class="badge" type="button" onclick="openGivenModal('V')"><div class="badge-icon" style="background:linear-gradient(135deg,#5E3470,#946AA6);">V</div><span class="badge-text">Vision</span></button>
+      <button class="badge" type="button" onclick="openGivenModal('E')"><div class="badge-icon" style="background:linear-gradient(135deg,#9A4A5E,#C98290);">E</div><span class="badge-text">Engage</span></button>
+      <button class="badge" type="button" onclick="openGivenModal('N')"><div class="badge-icon" style="background:linear-gradient(135deg,#4E3A72,#8A73B0);">N</div><span class="badge-text">Nurture</span></button>
     </div>
     <div class="hero-badges-hint">위 버튼을 클릭하면 자세한 내용을 볼 수 있어요</div>
   </div>
-  <div class="scroll-hint"><span class="scroll-text">SCROLL</span><svg width="1" height="30"><line x1="0.5" y1="0" x2="0.5" y2="30" stroke="rgba(167,139,250,0.4)" stroke-width="1.5"/></svg></div>
+  <div class="scroll-hint"><span class="scroll-text">SCROLL</span><svg width="1" height="30"><line x1="0.5" y1="0" x2="0.5" y2="30" stroke="rgba(var(--acc-rgb),0.4)" stroke-width="1.5"/></svg></div>
 </section>
 
 <div class="given-modal-overlay" id="givenModalOverlay" onclick="if(event.target===this)closeGivenModal()">
@@ -183,17 +183,17 @@
 </div>
 
 <!-- WHO WE ARE -->
-<section class="who-we-are">
+<section class="lt who-we-are">
   <div class="container" style="max-width:760px;text-align:center;">
     <span class="label" data-fade="">우리는 누구인가 · WHO WE ARE</span>
     <h2 class="section-title" data-fade="" style="margin-bottom:36px;">하늘의 분위기를<br><em>자아내는 사람들</em></h2>
-    <p class="body-text" data-fade="" style="margin-bottom:18px;">GIVEN MINISTRY는 개인의 관점이 아니라 <span style="color:#F0DDB0;">하나님 나라의 관점</span>에서 이 땅의 삶과 사역을 바라보는 사람들이 모인 사역 공동체입니다.</p>
-    <p class="body-text" data-fade="">하나님이 허락하신 <span style="color:#F0DDB0;">창조의 힘</span>으로 그리스도의 문화를 만들어 가고, 우리가 머무는 자리마다 하늘의 분위기를 자아내는 사람들이 되고자 합니다.</p>
+    <p class="body-text" data-fade="" style="margin-bottom:18px;">GIVEN MINISTRY는 개인의 관점이 아니라 <span style="color:var(--gold-t);">하나님 나라의 관점</span>에서 이 땅의 삶과 사역을 바라보는 사람들이 모인 사역 공동체입니다.</p>
+    <p class="body-text" data-fade="">하나님이 허락하신 <span style="color:var(--gold-t);">창조의 힘</span>으로 그리스도의 문화를 만들어 가고, 우리가 머무는 자리마다 하늘의 분위기를 자아내는 사람들이 되고자 합니다.</p>
   </div>
 </section>
 
 <!-- THREE PILLARS -->
-<section class="bg2">
+<section class="lt bg2">
   <div class="container">
     <span class="label" data-fade="">우리가 하는 일 · WHAT WE DO</span>
     <h2 class="section-title" data-fade="">재능과 자원이 모여 <em>사역이 됩니다</em></h2>
@@ -218,16 +218,16 @@
 </section>
 
 <!-- RECENT ACTIVITY -->
-<section>
+<section class="lt">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px;" data-fade="">
       <div><span class="label">최근 활동 · RECENT</span><h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,42px);font-weight:400;">함께 만들어온 <em style="color:var(--violet);">이야기들</em></h2></div>
-      <a href="./projects.html" style="text-decoration:none;font-size:12px;letter-spacing:0.15em;color:var(--violet);font-family:'Noto Sans KR',sans-serif;font-weight:300;border-bottom:1px solid rgba(167,139,250,0.3);padding-bottom:2px;">전체 보기 →</a>
+      <a href="./projects.html" style="text-decoration:none;font-size:12px;letter-spacing:0.15em;color:var(--violet);font-family:'Noto Sans KR',sans-serif;font-weight:300;border-bottom:1px solid rgba(var(--acc-rgb),0.3);padding-bottom:2px;">전체 보기 →</a>
     </div>
     <div class="grid-3" data-fade="">
       <div class="card">
         <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(20,15,35,0.55),rgba(20,15,35,0.1)),url('./images/concert-01-shellwe-apoi.jpg') center/cover;">
-          <span class="tag" style="background:rgba(167,139,250,0.15);color:var(--violet);">공연</span>
+          <span class="tag" style="background:rgba(var(--acc-rgb),0.15);color:var(--violet);">공연</span>
         </div>
         <div style="font-size:12px;color:var(--muted);margin-bottom:8px;font-family:'Noto Sans KR',sans-serif;">2024. 10</div>
         <h3 style="font-size:16px;font-weight:500;margin-bottom:8px;">제1회 기븐미니스트리 with 쉘위워십</h3>
@@ -254,7 +254,7 @@
 </section>
 
 <!-- WORSHIP PREVIEW -->
-<section class="bg2">
+<section class="lt bg2">
   <div class="container">
     <div style="display:flex;gap:60px;align-items:center;flex-wrap:wrap;" data-fade="">
       <div style="flex:1;min-width:260px;">
@@ -275,12 +275,12 @@
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
+<section data-band="dark" class="cta-section">
   <div class="cta-bg"></div>
   <div class="container-sm" style="position:relative;" data-fade="">
     <span class="label" style="justify-content:center;">함께하세요 · JOIN US</span>
     <h2 class="cta-title">당신의 재능이<br><em style="color:var(--violet);">사역이 됩니다</em></h2>
-    <p style="font-size:15px;font-weight:300;line-height:2;color:rgba(240,238,255,0.65);margin-bottom:40px;">음악이든, 미술이든, 공간이든, 기획이든 — 어떤 형태의 재능이든 환영합니다.</p>
+    <p style="font-size:15px;font-weight:300;line-height:2;color:var(--tx-mid);margin-bottom:40px;">음악이든, 미술이든, 공간이든, 기획이든 — 어떤 형태의 재능이든 환영합니다.</p>
     <a href="./apply.html" class="btn btn-primary" style="font-size:19px;padding:16px 56px;">참여 신청하기</a>
   </div>
 </section>
@@ -298,15 +298,15 @@
 
 <script>
 var GIVEN_DATA={
-  G:{word:'Glorify',label:'영화롭게 하다',icon:'G',bg:'linear-gradient(135deg,#5B4E88,#8478B0)',
+  G:{word:'Glorify',label:'영화롭게 하다',icon:'G',bg:'linear-gradient(135deg,#6E2A50,#A0577E)',
      desc:'우리가 가진 모든 재능과 창작물은 결국 하나님을 영화롭게 하기 위함입니다. 무대 위의 노래 한 소절, 캔버스 위의 붓질 하나까지 그 자체로 예배가 되기를 소망합니다.'},
-  I:{word:'Inspire',label:'영감을 주다',icon:'I',bg:'linear-gradient(135deg,#643CB3,#956AD9)',
+  I:{word:'Inspire',label:'영감을 주다',icon:'I',bg:'linear-gradient(135deg,#8E3B63,#C07399)',
      desc:'문화와 예술은 사람의 마음을 움직입니다. 우리는 삶에 지친 이들에게 위로와 소망의 영감을 전하는 통로가 되고자 합니다.'},
-  V:{word:'Vision',label:'비전을 보다',icon:'V',bg:'linear-gradient(135deg,#4242B9,#7876D8)',
+  V:{word:'Vision',label:'비전을 보다',icon:'V',bg:'linear-gradient(135deg,#5E3470,#946AA6)',
      desc:'문화 사역을 통해 다음 세대와 이 시대에 하나님 나라의 비전을 보여주고, 그 비전을 함께 그려가는 공동체가 되고자 합니다.'},
-  E:{word:'Engage',label:'참여하다',icon:'E',bg:'linear-gradient(135deg,#6B40B4,#A06CD6)',
+  E:{word:'Engage',label:'참여하다',icon:'E',bg:'linear-gradient(135deg,#9A4A5E,#C98290)',
      desc:'혼자가 아니라 함께. 각자의 은사로 서로 연결되고, 지역사회와 이웃에게 다가가 실제로 참여하는 사역을 지향합니다.'},
-  N:{word:'Nurture',label:'양육하다',icon:'N',bg:'linear-gradient(135deg,#3A54B7,#6B87DC)',
+  N:{word:'Nurture',label:'양육하다',icon:'N',bg:'linear-gradient(135deg,#4E3A72,#8A73B0)',
      desc:'재능은 훈련과 돌봄 속에서 자랍니다. 우리는 다음 세대 크리에이터와 아티스트를 함께 키워가는 공동체입니다.'}
 };
 function openGivenModal(key){

@@ -25,7 +25,7 @@
 <meta name="twitter:description" content="기븐미니스트리 예배 안내 — 쉘위워십(Shall We Worship)과 함께하는 월례 예배 일정과 장소를 안내합니다. 누구나 함께 예배드릴 수 있습니다.">
 <meta name="twitter:image" content="https://givenministry.com/og-image.jpg?v=2">
 
-<link rel="stylesheet" href="./style.css?v=units">
+<link rel="stylesheet" href="./style.css?v=lightB">
 </head>
 <body>
 
@@ -66,7 +66,7 @@
 </div>
 
 <!-- INTRO -->
-<section>
+<section class="lt">
   <div class="container two-col">
     <div style="flex:1;" data-fade="">
       <span class="label">정기 예배란 · ABOUT</span>
@@ -84,7 +84,7 @@
 </section>
 
 <!-- SHALL WE WORSHIP -->
-<section style="border-top:1px solid var(--bdr);">
+<section class="lt" style="border-top:1px solid var(--bdr);">
   <div class="container">
     <span class="label" data-fade="">함께하는 예배 · SHALL WE WORSHIP</span>
     <h2 class="section-title" data-fade="">쉘위워십, <em>찬미의 제사를 드리는 자리</em></h2>
@@ -134,7 +134,7 @@
 </section>
 
 <!-- MOMENTS -->
-<section class="bg2">
+<section class="lt bg2">
   <div class="container">
     <span class="label" data-fade="">예배의 순간들 · MOMENTS</span>
     <h2 class="section-title" data-fade="">쉘위워십과 함께한 <em>찬양의 자리</em></h2>
@@ -155,7 +155,7 @@
   </div>
 </section>
 <!-- VIDEO -->
-<section>
+<section class="lt">
   <div class="container-sm" style="text-align:center;">
     <span class="label" data-fade="">영상으로 만나는 예배 · VIDEO</span>
     <h2 class="section-title" data-fade="" style="margin-bottom:36px;">쉘위워십 <em>예배 영상</em></h2>
@@ -176,7 +176,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList
 </script>
 
 <!-- SCHEDULE -->
-<section class="bg2">
+<section class="lt bg2">
   <div class="container" data-fade="">
     <span class="label">정기 예배 일정 · SCHEDULE</span>
     <div class="card" style="border:1px solid rgba(150,121,180,0.2);border-radius:16px;padding:48px;display:flex;gap:48px;align-items:center;flex-wrap:wrap;">
@@ -202,12 +202,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList
 </section>
 
 <!-- REGULAR vs OPEN -->
-<section>
+<section class="lt">
   <div class="container">
     <span class="label" data-fade="">예배 구성 · SERVICE FLOW</span>
     <h2 class="section-title" data-fade="">모두를 위한 <em>열린 예배</em></h2>
     <div class="grid-2" data-fade="">
-      <div style="background:linear-gradient(145deg,#5B3DC8,#7C5CE8,#A78BFA);padding:48px;border-radius:16px;">
+      <div style="background:linear-gradient(145deg,#4E1E3C,#7A2E56,#B0577F);padding:48px;border-radius:16px;">
         <div style="font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.6);font-family:'Noto Sans KR',sans-serif;margin-bottom:16px;">REGULAR TEAM</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:#fff;margin-bottom:10px;">고정 예배팀</h3>
         <div style="font-size:13px;color:rgba(255,255,255,0.7);font-family:'Noto Sans KR',sans-serif;margin-bottom:24px;">사역의 기둥이 되어 쉘위워십과 함께 매월 예배를 준비</div>
@@ -222,7 +222,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList
         <div style="font-size:11px;letter-spacing:0.2em;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:16px;">OPEN WORSHIP</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;margin-bottom:10px;">열린 예배</h3>
         <div style="font-size:13px;color:var(--muted);font-family:'Noto Sans KR',sans-serif;margin-bottom:24px;">누구든 자유롭게 참석할 수 있는 예배</div>
-        <ul style="list-style:none;font-size:14px;color:rgba(240,238,255,0.65);font-weight:300;line-height:2.4;">
+        <ul style="list-style:none;font-size:14px;color:var(--tx-mid);font-weight:300;line-height:2.4;">
           <li>· 자율 멤버 자유 참석</li>
           <li>· 관심 있는 분들 환영</li>
           <li>· 사전 신청 불필요</li>
@@ -234,7 +234,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList
 </section>
 
 <!-- CTA -->
-<section class="bg2" style="text-align:center;padding:80px 48px;" data-fade="">
+<section data-band="dark" class="bg2" style="text-align:center;padding:80px 48px;" data-fade="">
   <div class="container-sm">
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,44px);font-weight:400;line-height:1.2;margin-bottom:16px;">다음 예배에 <em style="color:var(--violet);">함께하세요</em></h2>
     <p style="font-size:14px;font-weight:300;color:var(--muted);line-height:2;margin-bottom:32px;">고정 예배팀으로 헌신하고 싶으신 분도, 한 번 와보고 싶으신 분도 모두 환영합니다.</p>
